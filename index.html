@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sítio Três Manhãs — Ovos, banana e leite direto do sítio</title>
+<meta name="description" content="Ovos caipiras, banana nanica e leite fresco direto do produtor pra sua casa, com entrega em Maringá e região.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:      #F4EDE0;
+  --cream-2:    #E9DFC7;
+  --milk:       #FFFDF9;
+  --milk-2:     #F1ECDD;
+  --yolk:       #C89B3C;
+  --yolk-dark:  #A67C2E;
+  --banana:     #D9B25C;
+  --leaf:       #3D5A73;
+  --leaf-2:     #2C4155;
+  --soil:       #33291F;
+  --soil-60:    #6B5D4C;
+  --crate:      #A9754F;
+  --kraft:      #E3D6BC;
+  --white:      #FFFDF9;
+  --radius:     18px;
+  --shadow:     0 12px 30px rgba(51,41,31,0.12);
+}
+*{ box-sizing:border-box; margin:0; padding:0; }
+html{ scroll-behavior:smooth; }
+body{
+  background:var(--cream);
+  color:var(--soil);
+  font-family:'Work Sans', sans-serif;
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{ font-family:'Fraunces', serif; color:var(--soil); line-height:1.1; font-weight:600; }
+a{ color:inherit; text-decoration:none; }
+img,svg{ display:block; max-width:100%; }
+ul{ list-style:none; }
+.eyebrow{ font-family:'IBM Plex Mono', monospace; font-size:0.78rem; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:var(--yolk-dark); }
+.wrap{ max-width:1180px; margin:0 auto; padding:0 28px; }
+.btn{ display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:14px 26px; border-radius:999px; font-family:'Work Sans', sans-serif; font-weight:600; font-size:0.98rem; cursor:pointer; border:2px solid transparent; transition:transform .18s ease, box-shadow .18s ease, background .18s ease; }
+.btn:focus-visible{ outline:3px solid var(--leaf); outline-offset:3px; }
+.btn-primary{ background:var(--yolk); color:var(--white); box-shadow:0 8px 20px rgba(226,146,39,0.35); }
+.btn-primary:hover{ transform:translateY(-2px); background:var(--yolk-dark); }
+.btn-outline{ background:transparent; border-color:var(--soil); color:var(--soil); }
+.btn-outline:hover{ background:var(--soil); color:var(--white); }
+.btn-light{ background:var(--white); color:var(--leaf-2); }
+.btn-light:hover{ transform:translateY(-2px); }
+
+/* header */
+header{ position:sticky; top:0; z-index:50; background:rgba(251,239,212,0.92); backdrop-filter:blur(6px); border-bottom:1px solid rgba(58,46,34,0.08); transition:box-shadow .2s ease; }
+header.scrolled{ box-shadow:0 6px 18px rgba(58,46,34,0.08); }
+.nav{ display:flex; align-items:center; justify-content:space-between; padding:18px 28px; }
+.logo{ font-family:'Fraunces', serif; font-weight:700; font-size:1.2rem; display:flex; align-items:center; gap:8px; white-space:nowrap; }
+.logo .dot{ color:var(--yolk); }
+.nav-links{ display:flex; align-items:center; gap:34px; font-weight:500; font-size:0.96rem; }
+.nav-links a{ position:relative; padding:4px 0; }
+.nav-links a::after{ content:""; position:absolute; left:0; bottom:-2px; width:0; height:2px; background:var(--yolk); transition:width .2s ease; }
+.nav-links a:hover::after, .nav-links a.active::after{ width:100%; }
+.nav-links a.active{ color:var(--yolk-dark); }
+.nav-cta{ display:flex; align-items:center; gap:18px; }
+.menu-toggle{ display:none; background:none; border:none; font-size:1.6rem; cursor:pointer; color:var(--soil); }
+@media(max-width:860px){
+  .nav-links{ position:absolute; top:100%; left:0; right:0; background:var(--cream); flex-direction:column; align-items:flex-start; padding:20px 28px; gap:16px; border-bottom:1px solid rgba(58,46,34,0.08); display:none; }
+  .nav-links.open{ display:flex; }
+  .menu-toggle{ display:block; }
+}
+@media(max-width:480px){
+  .nav{ padding:16px 20px; } .logo{ font-size:1rem; } .nav-cta{ gap:10px; } .nav-cta .btn-primary{ padding:10px 16px; font-size:0.85rem; }
+}
+
+/* page hero (inner pages) */
+.page-hero{ padding:56px 0 40px; }
+.page-hero .eyebrow{ margin-bottom:10px; }
+.page-hero h1{ font-size:clamp(2rem,4vw,2.9rem); max-width:20ch; }
+.page-hero p{ color:var(--soil-60); max-width:56ch; margin-top:14px; font-size:1.05rem; }
+.crumb{ font-family:'IBM Plex Mono', monospace; font-size:0.78rem; color:var(--soil-60); margin-bottom:14px; }
+.crumb a:hover{ color:var(--yolk-dark); }
+
+section{ padding:84px 0; }
+.section-head{ max-width:640px; margin-bottom:48px; }
+.section-head h2{ font-size:clamp(1.9rem,3.4vw,2.5rem); margin-top:10px; }
+.section-head p{ color:var(--soil-60); margin-top:12px; font-size:1.05rem; }
+.section-alt{ background:var(--cream-2); }
+
+/* reveal on scroll */
+.reveal{ opacity:0; transform:translateY(24px); transition:opacity .6s ease, transform .6s ease; }
+.reveal.visible{ opacity:1; transform:translateY(0); }
+@media (prefers-reduced-motion: reduce){ .reveal{ opacity:1; transform:none; transition:none; } }
+
+/* ---- HERO CAROUSEL ---- */
+.hero-carousel{ position:relative; overflow:hidden; border-radius:24px; background:var(--leaf); }
+.hc-track{ display:flex; transition:transform .6s cubic-bezier(.65,0,.35,1); }
+.hc-slide{ min-width:100%; display:grid; grid-template-columns:1.05fr 0.95fr; gap:40px; align-items:center; padding:64px 56px; }
+.hc-slide .eyebrow{ color:var(--banana); }
+.hc-slide h2{ color:var(--white); font-size:clamp(1.9rem,3.6vw,2.7rem); margin:12px 0 16px; }
+.hc-slide p{ color:#E4EEE1; max-width:44ch; margin-bottom:24px; }
+.hc-art{ display:flex; justify-content:center; }
+.hc-dots{ position:absolute; bottom:20px; left:50%; transform:translateX(-50%); display:flex; gap:10px; z-index:5; }
+.hc-dot{ width:9px; height:9px; border-radius:50%; background:rgba(255,255,255,0.4); border:none; cursor:pointer; padding:0; transition:background .2s ease, transform .2s ease; }
+.hc-dot.active{ background:var(--banana); transform:scale(1.3); }
+.hc-arrow{ position:absolute; top:50%; transform:translateY(-50%); width:42px; height:42px; border-radius:50%; background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.3); color:var(--white); font-size:1.1rem; cursor:pointer; z-index:5; display:flex; align-items:center; justify-content:center; transition:background .2s ease; }
+.hc-arrow:hover{ background:rgba(255,255,255,0.3); }
+.hc-arrow.prev{ left:18px; } .hc-arrow.next{ right:18px; }
+@media(max-width:760px){ .hc-slide{ grid-template-columns:1fr; padding:44px 24px 70px; text-align:left; } .hc-art{ order:-1; max-width:220px; } .hc-arrow{ top:auto; bottom:16px; transform:none; width:36px; height:36px; } .hc-arrow.prev{ left:16px; } .hc-arrow.next{ right:16px; } .hc-dots{ bottom:26px; } }
+
+/* trust row */
+.trust-row{ display:flex; gap:26px; flex-wrap:wrap; margin-top:26px; }
+.trust-item{ display:flex; align-items:center; gap:8px; font-size:0.86rem; font-weight:600; color:var(--leaf-2); }
+.trust-item svg{ width:18px; height:18px; flex-shrink:0; }
+
+/* products */
+.products-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:26px; }
+.product-card{ background:var(--white); border:1px solid rgba(58,46,34,0.1); border-radius:var(--radius); padding:30px 26px 26px; position:relative; box-shadow:var(--shadow); transition:transform .25s ease, box-shadow .25s ease; }
+.product-card:hover{ transform:translateY(-6px); box-shadow:0 20px 40px rgba(58,46,34,0.18); }
+.product-card .badge{ display:inline-block; font-family:'IBM Plex Mono', monospace; font-size:0.68rem; font-weight:600; letter-spacing:0.08em; background:var(--cream-2); color:var(--yolk-dark); padding:6px 12px; border-radius:999px; margin-bottom:14px; }
+.product-card h3{ font-size:1.3rem; margin-bottom:8px; }
+.product-card p.desc{ color:var(--soil-60); margin-bottom:16px; font-size:0.95rem; }
+.product-card ul{ display:flex; flex-direction:column; gap:8px; margin-bottom:18px; }
+.product-card li{ display:flex; gap:8px; font-size:0.88rem; align-items:flex-start; }
+.product-card li svg{ width:16px; height:16px; flex-shrink:0; margin-top:3px; color:var(--yolk-dark); }
+.product-foot{ display:flex; align-items:center; justify-content:space-between; border-top:1px dashed rgba(58,46,34,0.2); padding-top:16px; }
+.product-foot .price{ font-family:'IBM Plex Mono', monospace; font-weight:600; color:var(--soil); }
+.product-foot .price span{ color:var(--soil-60); font-weight:500; font-size:0.82rem; }
+.product-art{ height:120px; display:flex; align-items:center; justify-content:center; margin-bottom:14px; }
+
+/* tabs */
+.tabs{ display:flex; gap:10px; flex-wrap:wrap; margin-bottom:36px; }
+.tab-btn{ font-family:'IBM Plex Mono', monospace; font-size:0.82rem; font-weight:600; letter-spacing:0.04em; padding:10px 18px; border-radius:999px; border:2px solid rgba(58,46,34,0.15); background:transparent; color:var(--soil-60); cursor:pointer; transition:all .2s ease; }
+.tab-btn:hover{ border-color:var(--yolk); color:var(--yolk-dark); }
+.tab-btn.active{ background:var(--soil); border-color:var(--soil); color:var(--white); }
+.hide{ display:none !important; }
+
+/* steps */
+.steps{ display:grid; grid-template-columns:repeat(3,1fr); gap:26px; }
+.step{ background:var(--white); border-radius:var(--radius); padding:30px 26px; box-shadow:var(--shadow); position:relative; transition:transform .25s ease; }
+.step:hover{ transform:translateY(-4px); }
+.step .num{ font-family:'Fraunces', serif; font-size:2.2rem; font-weight:700; color:var(--yolk); margin-bottom:14px; }
+.step h3{ font-size:1.15rem; margin-bottom:8px; }
+.step p{ color:var(--soil-60); font-size:0.95rem; }
+
+/* testimonial carousel */
+.tc-wrap{ position:relative; max-width:760px; margin:0 auto; }
+.tc-track{ display:flex; transition:transform .5s ease; }
+.tc-slide{ min-width:100%; padding:0 8px; }
+.testimonial{ background:var(--white); border-radius:var(--radius); padding:36px 34px; border-left:4px solid var(--yolk); box-shadow:var(--shadow); }
+.testimonial p.quote{ font-size:1.15rem; margin-bottom:20px; color:var(--soil); font-family:'Fraunces', serif; font-style:italic; }
+.testimonial .who{ display:flex; align-items:center; gap:12px; }
+.avatar{ width:44px; height:44px; border-radius:50%; background:var(--leaf); color:var(--white); display:flex; align-items:center; justify-content:center; font-family:'Fraunces', serif; font-weight:600; }
+.who .name{ font-weight:600; font-size:0.94rem; }
+.who .loc{ font-size:0.82rem; color:var(--soil-60); }
+.tc-controls{ display:flex; justify-content:center; gap:14px; margin-top:24px; align-items:center; }
+.tc-arrow{ width:38px; height:38px; border-radius:50%; border:1px solid rgba(58,46,34,0.2); background:var(--white); cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background .2s ease; }
+.tc-arrow:hover{ background:var(--cream-2); }
+.tc-dots{ display:flex; gap:8px; }
+.tc-dot{ width:8px; height:8px; border-radius:50%; background:rgba(58,46,34,0.2); border:none; cursor:pointer; padding:0; }
+.tc-dot.active{ background:var(--yolk); }
+
+/* baskets */
+.baskets-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:26px; align-items:stretch; }
+.basket{ background:var(--white); border:1px solid rgba(58,46,34,0.1); border-radius:var(--radius); padding:32px 28px; display:flex; flex-direction:column; box-shadow:var(--shadow); transition:transform .25s ease; }
+.basket:hover{ transform:translateY(-6px); }
+.basket.featured{ background:var(--soil); color:var(--white); transform:translateY(-10px); box-shadow:0 18px 40px rgba(58,46,34,0.28); }
+.basket.featured:hover{ transform:translateY(-14px); }
+.basket.featured .basket-price, .basket.featured h3{ color:var(--white); }
+.basket.featured p, .basket.featured li{ color:#E6DDCF; }
+.basket .tag-featured{ align-self:flex-start; background:var(--yolk); color:var(--white); font-family:'IBM Plex Mono', monospace; font-size:0.68rem; font-weight:600; letter-spacing:0.08em; padding:5px 10px; border-radius:999px; margin-bottom:14px; }
+.basket h3{ font-size:1.25rem; margin-bottom:6px; }
+.basket-price{ font-family:'Fraunces', serif; font-size:2.1rem; font-weight:700; margin:10px 0 4px; color:var(--soil); }
+.basket-price span{ font-size:0.95rem; font-family:'Work Sans'; font-weight:400; color:var(--soil-60); }
+.basket ul{ margin:20px 0 26px; display:flex; flex-direction:column; gap:10px; flex-grow:1; }
+.basket li{ font-size:0.92rem; display:flex; gap:8px; }
+.basket li svg{ width:16px; height:16px; color:var(--yolk-dark); flex-shrink:0; margin-top:3px; }
+.basket.featured li svg{ color:var(--banana); }
+
+/* accordion */
+.accordion{ max-width:760px; margin:0 auto; display:flex; flex-direction:column; gap:14px; }
+.acc-item{ background:var(--white); border-radius:14px; box-shadow:var(--shadow); overflow:hidden; }
+.acc-head{ display:flex; align-items:center; justify-content:space-between; padding:20px 24px; cursor:pointer; font-weight:600; }
+.acc-head .plus{ font-size:1.3rem; color:var(--yolk-dark); transition:transform .25s ease; }
+.acc-item.open .acc-head .plus{ transform:rotate(45deg); }
+.acc-body{ max-height:0; overflow:hidden; transition:max-height .3s ease; }
+.acc-body-inner{ padding:0 24px 20px; color:var(--soil-60); font-size:0.95rem; }
+
+/* timeline (sobre) */
+.timeline{ position:relative; max-width:760px; margin:0 auto; padding-left:30px; border-left:2px solid var(--kraft); }
+.tl-item{ position:relative; padding-bottom:36px; }
+.tl-item:last-child{ padding-bottom:0; }
+.tl-item::before{ content:""; position:absolute; left:-38px; top:2px; width:14px; height:14px; border-radius:50%; background:var(--yolk); border:3px solid var(--cream); }
+.tl-item .year{ font-family:'IBM Plex Mono', monospace; font-size:0.78rem; color:var(--yolk-dark); font-weight:600; }
+.tl-item h3{ font-size:1.1rem; margin:6px 0; }
+.tl-item p{ color:var(--soil-60); font-size:0.94rem; }
+
+/* values */
+.values-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.value-card{ text-align:left; }
+.value-card .icon{ width:52px; height:52px; border-radius:14px; background:var(--cream-2); display:flex; align-items:center; justify-content:center; margin-bottom:16px; }
+.value-card .icon svg{ width:26px; height:26px; color:var(--leaf); }
+.value-card h3{ font-size:1.1rem; margin-bottom:6px; }
+.value-card p{ color:var(--soil-60); font-size:0.94rem; }
+
+/* contact page */
+.contact-grid{ display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:start; }
+.form-card{ background:var(--white); border-radius:var(--radius); padding:32px; box-shadow:var(--shadow); }
+.form-row{ margin-bottom:18px; display:flex; flex-direction:column; gap:6px; }
+.form-row label{ font-size:0.85rem; font-weight:600; color:var(--soil); }
+.form-row input, .form-row textarea, .form-row select{ padding:12px 14px; border-radius:10px; border:1.5px solid rgba(58,46,34,0.18); font-family:'Work Sans', sans-serif; font-size:0.95rem; background:var(--milk); }
+.form-row input:focus, .form-row textarea:focus, .form-row select:focus{ outline:none; border-color:var(--yolk); }
+.info-card{ background:var(--leaf); color:var(--white); border-radius:var(--radius); padding:32px; margin-bottom:20px; }
+.info-card h3{ color:var(--white); font-size:1.15rem; margin-bottom:14px; }
+.info-row{ display:flex; gap:12px; margin-bottom:12px; font-size:0.94rem; color:#DCE7DC; }
+.info-row svg{ width:18px; height:18px; flex-shrink:0; color:var(--banana); margin-top:2px; }
+.map-block{ height:220px; border-radius:var(--radius); background:repeating-linear-gradient(45deg, var(--kraft), var(--kraft) 12px, var(--cream-2) 12px, var(--cream-2) 24px); display:flex; align-items:center; justify-content:center; color:var(--soil-60); font-family:'IBM Plex Mono', monospace; font-size:0.82rem; text-align:center; padding:20px; }
+
+/* cta final */
+.cta-final{ background:linear-gradient(135deg, var(--leaf) 0%, var(--leaf-2) 100%); color:var(--white); border-radius:24px; padding:56px 48px; display:grid; grid-template-columns:1.2fr 1fr; gap:36px; align-items:center; }
+.cta-final h2{ color:var(--white); font-size:clamp(1.7rem,3vw,2.2rem); margin-bottom:12px; }
+.cta-final p{ color:#DCE7DC; max-width:44ch; }
+.newsletter{ background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); border-radius:14px; padding:22px; }
+.newsletter label{ font-size:0.8rem; font-weight:600; display:block; margin-bottom:10px; color:var(--banana); font-family:'IBM Plex Mono', monospace; letter-spacing:0.06em; }
+.newsletter form{ display:flex; gap:10px; flex-wrap:wrap; }
+.newsletter input{ flex:1; min-width:160px; padding:12px 14px; border-radius:10px; border:none; font-family:'Work Sans', sans-serif; font-size:0.95rem; }
+.newsletter input:focus-visible{ outline:3px solid var(--banana); }
+
+/* promise band */
+.promise{ background:var(--leaf); color:var(--white); padding:54px 0; }
+.promise .wrap{ display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; }
+.promise h2{ color:var(--white); font-size:clamp(1.6rem,3vw,2.1rem); }
+.promise p{ color:#DCE7DC; font-size:1.02rem; max-width:48ch; }
+.promise .stat{ font-family:'Fraunces', serif; font-size:2.6rem; color:var(--banana); font-weight:700; }
+
+/* footer */
+footer{ background:var(--soil); color:#E6DDCF; padding:54px 0 28px; margin-top:40px; }
+.footer-grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px; margin-bottom:36px; }
+footer h4{ font-family:'IBM Plex Mono', monospace; font-size:0.78rem; letter-spacing:0.1em; color:var(--banana); margin-bottom:16px; text-transform:uppercase; }
+footer .logo{ color:var(--white); margin-bottom:12px; }
+footer p{ font-size:0.92rem; color:#C9BFAE; max-width:36ch; }
+footer ul{ display:flex; flex-direction:column; gap:10px; }
+footer a{ font-size:0.92rem; color:#E6DDCF; }
+footer a:hover{ color:var(--banana); }
+.footer-bottom{ border-top:1px solid rgba(255,255,255,0.12); padding-top:22px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-size:0.82rem; color:#B3A996; }
+
+@media(max-width:900px){
+  .hero-grid, .promise .wrap, .products-grid, .steps, .baskets-grid, .cta-final, .footer-grid, .contact-grid, .values-grid{ grid-template-columns:1fr; }
+  .basket.featured{ transform:none; }
+  .cta-final{ padding:40px 26px; }
+  section{ padding:60px 0; }
+}
+@media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } *{ transition:none !important; } }
+
+/* ---------- flying sparkles / grain particles ---------- */
+.sparkle-field{ position:absolute; inset:0; overflow:hidden; pointer-events:none; z-index:1; }
+.sparkle{ position:absolute; bottom:-20px; opacity:0; border-radius:50%; background:radial-gradient(circle, rgba(255,244,214,0.95) 0%, rgba(255,244,214,0) 70%); animation:floatUp linear infinite; }
+.sparkle.grain{ background:var(--banana); border-radius:2px; width:5px; height:9px; transform:rotate(20deg); opacity:0.85; }
+@keyframes floatUp{
+  0%{ transform:translateY(0) translateX(0) rotate(0deg); opacity:0; }
+  10%{ opacity:0.9; }
+  50%{ transform:translateY(-160px) translateX(14px) rotate(90deg); }
+  90%{ opacity:0.5; }
+  100%{ transform:translateY(-340px) translateX(-10px) rotate(180deg); opacity:0; }
+}
+@media (prefers-reduced-motion: reduce){ .sparkle{ animation:none; display:none; } }
+
+/* ---------- shimmer CTA ---------- */
+.btn-shimmer{ position:relative; overflow:hidden; }
+.btn-shimmer::after{
+  content:""; position:absolute; top:0; left:-60%; width:40%; height:100%;
+  background:linear-gradient(120deg, transparent, rgba(255,255,255,0.55), transparent);
+  transform:skewX(-20deg); animation:shimmerSweep 3.2s ease-in-out infinite;
+}
+@keyframes shimmerSweep{ 0%{ left:-60%; } 45%{ left:130%; } 100%{ left:130%; } }
+@media (prefers-reduced-motion: reduce){ .btn-shimmer::after{ animation:none; } }
+
+/* ---------- delivery badge ---------- */
+.delivery-badge{ display:inline-flex; align-items:center; gap:8px; background:var(--leaf); color:var(--white); padding:8px 16px 8px 10px; border-radius:999px; font-family:'IBM Plex Mono', monospace; font-size:0.78rem; font-weight:600; margin-bottom:18px; box-shadow:0 6px 16px rgba(44,65,85,0.3); }
+.delivery-badge svg{ width:16px; height:16px; color:var(--banana); }
+
+/* ---------- trust / certification ---------- */
+.trust-strip{ background:var(--white); border-top:1px solid rgba(51,41,31,0.08); border-bottom:1px solid rgba(51,41,31,0.08); }
+.trust-strip .wrap{ padding:20px 28px; display:flex; flex-wrap:wrap; gap:28px; align-items:center; justify-content:center; }
+.trust-mini{ display:flex; align-items:center; gap:10px; font-size:0.86rem; font-weight:600; color:var(--soil-60); }
+.trust-mini svg{ width:20px; height:20px; color:var(--yolk-dark); flex-shrink:0; }
+
+.cert-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.cert-card{ background:var(--white); border:1px solid rgba(51,41,31,0.1); border-radius:var(--radius); padding:28px 24px; text-align:center; box-shadow:var(--shadow); transition:transform .25s ease; }
+.cert-card:hover{ transform:translateY(-6px); }
+.cert-badge{ width:64px; height:64px; margin:0 auto 16px; border-radius:50%; background:linear-gradient(135deg, var(--yolk) 0%, var(--yolk-dark) 100%); display:flex; align-items:center; justify-content:center; color:var(--white); box-shadow:0 0 0 6px rgba(200,155,60,0.15); animation:pulseGlow 3s ease-in-out infinite; }
+.cert-badge svg{ width:30px; height:30px; }
+@keyframes pulseGlow{ 0%,100%{ box-shadow:0 0 0 6px rgba(200,155,60,0.15); } 50%{ box-shadow:0 0 0 12px rgba(200,155,60,0.06); } }
+.cert-card h3{ font-size:1.05rem; margin-bottom:8px; }
+.cert-card p{ color:var(--soil-60); font-size:0.9rem; }
+.cert-note{ text-align:center; color:var(--soil-60); font-size:0.85rem; margin-top:24px; font-style:italic; }
+
+/* ---------- photo placeholders (polaroid style) ---------- */
+.photo-frame{ background:var(--white); padding:12px 12px 34px; border-radius:8px; box-shadow:0 10px 24px rgba(51,41,31,0.16); transform:rotate(-2deg); transition:transform .3s ease; position:relative; }
+.photo-frame:nth-child(even){ transform:rotate(2deg); }
+.photo-frame:hover{ transform:rotate(0deg) scale(1.02); }
+.photo-frame-inner{ background:linear-gradient(135deg, var(--cream-2), var(--kraft)); border:1px dashed rgba(51,41,31,0.3); border-radius:4px; aspect-ratio:4/3; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; color:var(--soil-60); overflow:hidden; }
+.photo-frame-inner.photo-frame-real{ border-style:solid; border-color:rgba(51,41,31,0.12); padding:0; }
+.photo-frame-inner.photo-frame-real img{ width:100%; height:100%; object-fit:cover; display:block; }
+.photo-frame.tall .photo-frame-inner{ aspect-ratio:4/5; }
+.photo-frame-inner svg{ width:34px; height:34px; opacity:0.6; }
+.photo-frame-inner p{ font-family:'IBM Plex Mono', monospace; font-size:0.72rem; letter-spacing:0.04em; }
+.photo-caption{ position:absolute; bottom:8px; left:0; right:0; text-align:center; font-family:'Fraunces', serif; font-style:italic; font-size:0.85rem; color:var(--soil-60); }
+.photos-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:30px; }
+.process-grid{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:48px; align-items:center; }
+
+/* ---------- reviews ---------- */
+.rating-summary{ display:flex; align-items:center; gap:20px; background:var(--white); border-radius:var(--radius); padding:24px 30px; box-shadow:var(--shadow); max-width:420px; margin:0 auto 40px; }
+.rating-summary .score{ font-family:'Fraunces', serif; font-size:2.6rem; font-weight:700; color:var(--soil); }
+.rating-summary .stars{ color:var(--yolk); display:inline-flex; gap:2px; }
+.rating-summary .stars .star{ width:16px; height:16px; color:rgba(51,41,31,0.2); }
+.rating-summary .stars .star.on{ color:var(--yolk); }
+.rating-summary .count{ font-size:0.82rem; color:var(--soil-60); margin-top:4px; }
+.testimonial .stars{ display:inline-flex; gap:2px; margin-bottom:12px; }
+.testimonial .stars .star{ width:15px; height:15px; color:rgba(51,41,31,0.2); }
+.testimonial .stars .star.on{ color:var(--yolk); }
+
+/* ---------- order tracking ---------- */
+.tracker-card{ background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow); padding:36px; max-width:760px; margin:0 auto; }
+.tracker-form{ display:flex; gap:12px; flex-wrap:wrap; margin-bottom:8px; }
+.tracker-form input{ flex:1; min-width:200px; padding:13px 16px; border-radius:10px; border:1.5px solid rgba(51,41,31,0.18); font-family:'Work Sans', sans-serif; font-size:0.95rem; }
+.tracker-form input:focus{ outline:none; border-color:var(--yolk); }
+.tracker-hint{ font-size:0.82rem; color:var(--soil-60); margin-bottom:26px; }
+.tracker-steps{ display:none; grid-template-columns:repeat(4,1fr); gap:0; position:relative; margin-top:10px; }
+.tracker-steps.show{ display:grid; }
+.tracker-steps::before{ content:""; position:absolute; top:19px; left:10%; right:10%; height:3px; background:rgba(51,41,31,0.12); z-index:0; }
+.t-step{ position:relative; z-index:1; text-align:center; }
+.t-step .t-dot{ width:38px; height:38px; border-radius:50%; background:var(--white); border:3px solid rgba(51,41,31,0.2); display:flex; align-items:center; justify-content:center; margin:0 auto 10px; color:transparent; transition:all .3s ease; }
+.t-step.done .t-dot{ background:var(--leaf); border-color:var(--leaf); color:var(--white); }
+.t-step.current .t-dot{ background:var(--yolk); border-color:var(--yolk); color:var(--white); animation:pulseGlow 1.6s ease-in-out infinite; }
+.t-step .t-dot svg{ width:18px; height:18px; }
+.t-step p{ font-size:0.8rem; font-weight:600; color:var(--soil-60); }
+.t-step.done p, .t-step.current p{ color:var(--soil); }
+
+/* ---------- humanized support chat ---------- */
+.chat-fab{ position:fixed; bottom:24px; left:24px; z-index:80; background:var(--leaf); color:var(--white); border:none; border-radius:999px; padding:14px 20px 14px 16px; display:flex; align-items:center; gap:10px; box-shadow:0 10px 26px rgba(44,65,85,0.4); cursor:pointer; font-family:'Work Sans', sans-serif; font-weight:600; font-size:0.9rem; transition:transform .2s ease; }
+.chat-fab:hover{ transform:translateY(-3px); }
+.chat-fab svg{ width:20px; height:20px; }
+.chat-fab .chat-avatar{ width:26px; height:26px; border-radius:50%; background:var(--banana); color:var(--leaf-2); display:flex; align-items:center; justify-content:center; font-family:'Fraunces', serif; font-weight:700; font-size:0.8rem; }
+.chat-panel{ position:fixed; bottom:24px; left:24px; z-index:90; width:330px; max-width:90vw; background:var(--white); border-radius:18px; box-shadow:0 20px 50px rgba(51,41,31,0.3); display:none; flex-direction:column; overflow:hidden; }
+.chat-panel.open{ display:flex; }
+.chat-head{ background:var(--leaf); color:var(--white); padding:16px 18px; display:flex; align-items:center; gap:12px; }
+.chat-head .chat-avatar{ width:36px; height:36px; border-radius:50%; background:var(--banana); color:var(--leaf-2); display:flex; align-items:center; justify-content:center; font-family:'Fraunces', serif; font-weight:700; }
+.chat-head div p:first-child{ font-weight:600; font-size:0.92rem; }
+.chat-head div p:last-child{ font-size:0.75rem; color:#CFE0E8; display:flex; align-items:center; gap:5px; }
+.chat-head div p:last-child::before{ content:""; width:7px; height:7px; border-radius:50%; background:#7CD68C; display:inline-block; }
+.chat-close{ margin-left:auto; background:none; border:none; color:var(--white); font-size:1.2rem; cursor:pointer; }
+.chat-body{ padding:16px; display:flex; flex-direction:column; gap:10px; max-height:280px; overflow-y:auto; background:var(--cream); }
+.chat-msg{ max-width:80%; padding:10px 13px; border-radius:14px; font-size:0.87rem; line-height:1.4; }
+.chat-msg.bot{ background:var(--white); border:1px solid rgba(51,41,31,0.1); align-self:flex-start; border-bottom-left-radius:4px; }
+.chat-msg.user{ background:var(--yolk); color:var(--white); align-self:flex-end; border-bottom-right-radius:4px; }
+.chat-input-row{ display:flex; gap:8px; padding:12px; border-top:1px solid rgba(51,41,31,0.08); }
+.chat-input-row input{ flex:1; padding:10px 12px; border-radius:10px; border:1.5px solid rgba(51,41,31,0.15); font-size:0.87rem; font-family:'Work Sans', sans-serif; }
+.chat-input-row input:focus{ outline:none; border-color:var(--yolk); }
+.chat-input-row button{ background:var(--yolk); color:var(--white); border:none; border-radius:10px; padding:0 14px; cursor:pointer; font-weight:600; }
+
+/* ---------- shopping cart ---------- */
+.cart-fab{ position:fixed; bottom:24px; right:24px; z-index:80; background:var(--yolk); color:var(--white); border:none; border-radius:50%; width:58px; height:58px; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 10px 26px rgba(200,155,60,0.45); transition:transform .2s ease; }
+.cart-fab:hover{ transform:translateY(-3px) scale(1.05); }
+.cart-fab svg{ width:24px; height:24px; }
+.cart-count{ position:absolute; top:-4px; right:-4px; background:var(--leaf); color:var(--white); font-size:0.68rem; font-weight:700; width:20px; height:20px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono', monospace; }
+.cart-count.bump{ animation:bump .3s ease; }
+@keyframes bump{ 0%{ transform:scale(1); } 40%{ transform:scale(1.4); } 100%{ transform:scale(1); } }
+.cart-overlay{ position:fixed; inset:0; background:rgba(51,41,31,0.45); z-index:95; display:none; }
+.cart-overlay.open{ display:block; }
+.cart-drawer{ position:fixed; top:0; right:-380px; width:360px; max-width:88vw; height:100%; background:var(--white); z-index:96; box-shadow:-10px 0 30px rgba(0,0,0,0.2); transition:right .3s ease; display:flex; flex-direction:column; }
+.cart-drawer.open{ right:0; }
+.cart-drawer-head{ padding:20px; border-bottom:1px solid rgba(51,41,31,0.1); display:flex; align-items:center; justify-content:space-between; }
+.cart-drawer-head h3{ font-size:1.2rem; }
+.cart-drawer-close{ background:none; border:none; font-size:1.3rem; cursor:pointer; color:var(--soil-60); }
+.cart-items{ flex:1; overflow-y:auto; padding:16px 20px; display:flex; flex-direction:column; gap:14px; }
+.cart-empty{ text-align:center; color:var(--soil-60); font-size:0.9rem; padding:40px 10px; }
+.cart-item{ display:flex; gap:12px; align-items:center; padding-bottom:14px; border-bottom:1px dashed rgba(51,41,31,0.15); }
+.cart-item-icon{ width:44px; height:44px; border-radius:10px; background:var(--cream-2); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.cart-item-icon svg{ width:22px; height:22px; }
+.cart-item-info{ flex:1; }
+.cart-item-info .name{ font-weight:600; font-size:0.9rem; }
+.cart-item-info .price{ font-size:0.8rem; color:var(--soil-60); font-family:'IBM Plex Mono', monospace; }
+.cart-qty{ display:flex; align-items:center; gap:8px; }
+.cart-qty button{ width:22px; height:22px; border-radius:50%; border:1px solid rgba(51,41,31,0.2); background:var(--white); cursor:pointer; font-size:0.85rem; line-height:1; }
+.cart-drawer-foot{ padding:18px 20px; border-top:1px solid rgba(51,41,31,0.1); }
+.cart-total{ display:flex; justify-content:space-between; font-weight:600; margin-bottom:14px; font-family:'IBM Plex Mono', monospace; }
+.cart-delivery-note{ display:flex; gap:8px; align-items:center; font-size:0.78rem; color:var(--soil-60); margin-bottom:14px; }
+.cart-delivery-note svg{ width:15px; height:15px; color:var(--leaf); flex-shrink:0; }
+
+@media(max-width:900px){
+  .cert-grid, .photos-grid, .process-grid{ grid-template-columns:1fr; }
+  .tracker-steps{ grid-template-columns:repeat(2,1fr); gap:20px 0; }
+  .tracker-steps::before{ display:none; }
+  .chat-fab span.chat-label{ display:none; }
+}
+</style>
+</head>
+<body>
+<header id="siteHeader">
+  <nav class="nav wrap">
+    <a href="index.html" class="logo">Sítio <span class="dot">Três</span> Manhãs</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Início</a></li>
+      <li><a href="produtos.html">Produtos</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="produtos.html#cestas" class="btn btn-primary">Fazer pedido</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">&#9776;</button>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-carousel" id="heroCarousel" style="position:relative;">
+      <div class="sparkle-field"><span class="sparkle grain" style="left:85%; width:7px; height:7px; animation-delay:0.3s; animation-duration:11.3s;"></span><span class="sparkle" style="left:62%; width:6px; height:6px; animation-delay:4.4s; animation-duration:8.1s;"></span><span class="sparkle" style="left:56%; width:9px; height:9px; animation-delay:0.8s; animation-duration:8.9s;"></span><span class="sparkle grain" style="left:62%; width:9px; height:9px; animation-delay:3.1s; animation-duration:9.8s;"></span><span class="sparkle" style="left:68%; width:6px; height:6px; animation-delay:2.4s; animation-duration:12.0s;"></span><span class="sparkle" style="left:83%; width:9px; height:9px; animation-delay:2.4s; animation-duration:9.5s;"></span><span class="sparkle grain" style="left:35%; width:9px; height:9px; animation-delay:3.0s; animation-duration:8.5s;"></span><span class="sparkle" style="left:76%; width:9px; height:9px; animation-delay:1.7s; animation-duration:9.1s;"></span><span class="sparkle" style="left:58%; width:6px; height:6px; animation-delay:3.3s; animation-duration:9.2s;"></span><span class="sparkle grain" style="left:6%; width:11px; height:11px; animation-delay:1.7s; animation-duration:7.7s;"></span><span class="sparkle" style="left:46%; width:6px; height:6px; animation-delay:2.0s; animation-duration:11.1s;"></span><span class="sparkle" style="left:15%; width:8px; height:8px; animation-delay:2.3s; animation-duration:11.2s;"></span><span class="sparkle grain" style="left:56%; width:6px; height:6px; animation-delay:5.3s; animation-duration:8.6s;"></span><span class="sparkle" style="left:53%; width:9px; height:9px; animation-delay:0.9s; animation-duration:8.2s;"></span><span class="sparkle" style="left:66%; width:5px; height:5px; animation-delay:2.1s; animation-duration:9.6s;"></span><span class="sparkle grain" style="left:14%; width:6px; height:6px; animation-delay:0.2s; animation-duration:12.0s;"></span><span class="sparkle" style="left:96%; width:11px; height:11px; animation-delay:3.0s; animation-duration:7.6s;"></span><span class="sparkle" style="left:78%; width:7px; height:7px; animation-delay:4.3s; animation-duration:10.4s;"></span></div>
+      <div class="hc-track js-track">
+        <div class="hc-slide">
+          <div>
+            <span class="delivery-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5v8h1"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>Entregamos em Maringá e região (PR)</span>
+            <p class="eyebrow">Direto do sítio pra sua mesa</p>
+            <h2>Ovos caipiras <em>no ponto certo</em>, toda semana</h2>
+            <p>Galinhas criadas soltas, ao ar livre. Sem hormônio, sem gaiola — só sabor de verdade.</p>
+            <a href="#produtos" class="btn btn-primary btn-shimmer">Ver produtos</a>
+          </div>
+          <div class="hc-art"><svg viewBox="0 0 160 160" width="120" role="img" aria-label="Ovos caipiras">
+    <ellipse cx="80" cy="140" rx="60" ry="10" fill="#3A2E22" opacity="0.08"/>
+    <ellipse cx="60" cy="95" rx="34" ry="42" fill="#FBEFD4" stroke="#D8B98A" stroke-width="2.5"/>
+    <ellipse cx="102" cy="105" rx="30" ry="38" fill="#F3E2BC" stroke="#D8B98A" stroke-width="2.5"/>
+    <ellipse cx="60" cy="88" rx="10" ry="7" fill="#FFFFFF" opacity="0.6"/>
+  </svg></div>
+        </div>
+        <div class="hc-slide">
+          <div>
+            <span class="delivery-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5v8h1"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>Entregamos em Maringá e região (PR)</span>
+            <p class="eyebrow">Colhida quase madura</p>
+            <h2>Banana nanica do jeito que o mercado nunca vende</h2>
+            <p>Sem agrotóxico, colhida no ponto certo de doçura e entregue em poucas horas.</p>
+            <a href="#produtos" class="btn btn-primary btn-shimmer">Ver produtos</a>
+          </div>
+          <div class="hc-art"><svg viewBox="0 0 160 160" width="120" role="img" aria-label="Banana nanica">
+    <ellipse cx="80" cy="140" rx="60" ry="10" fill="#3A2E22" opacity="0.08"/>
+    <path d="M45 120 C20 90, 30 45, 85 25 C110 16, 130 22, 135 35 C110 32, 92 42, 80 62 C120 40, 140 65, 138 90 C105 68, 68 78, 50 118 Z" fill="#F5C518"/>
+    <path d="M48 118 C28 92, 34 52, 82 32" fill="none" stroke="#C79A0E" stroke-width="3" stroke-linecap="round"/>
+    <path d="M120 30 C126 24, 134 24, 138 30" fill="none" stroke="#8C6E1A" stroke-width="3" stroke-linecap="round"/>
+  </svg></div>
+        </div>
+        <div class="hc-slide">
+          <div>
+            <span class="delivery-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5v8h1"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>Entregamos em Maringá e região (PR)</span>
+            <p class="eyebrow">Novidade Sítio Três Manhãs</p>
+            <h2>Leite fresco, pasteurizado no mesmo dia</h2>
+            <p>Direto da nossa pequena produção, sem conservantes e com entrega em garrafa de vidro retornável.</p>
+            <a href="#produtos" class="btn btn-primary btn-shimmer">Conhecer o leite</a>
+          </div>
+          <div class="hc-art"><svg viewBox="0 0 160 160" width="120" role="img" aria-label="Garrafa de leite fresco">
+    <ellipse cx="80" cy="145" rx="46" ry="9" fill="#3A2E22" opacity="0.08"/>
+    <path d="M65 30 h30 v18 l14 20 v65 a8 8 0 0 1-8 8 H59 a8 8 0 0 1-8-8 V68 l14-20 Z" fill="#FFFDF6" stroke="#D8B98A" stroke-width="2.5"/>
+    <rect x="60" y="24" width="40" height="12" rx="3" fill="#5B7C99"/>
+    <rect x="51" y="95" width="58" height="30" fill="#E29227" opacity="0.9"/>
+    <text x="80" y="115" font-family="IBM Plex Mono, monospace" font-size="11" fill="#FFFDF6" text-anchor="middle" font-weight="600">FRESCO</text>
+  </svg></div>
+        </div>
+      </div>
+      <button class="hc-arrow prev js-prev" aria-label="Slide anterior">&#8592;</button>
+      <button class="hc-arrow next js-next" aria-label="Próximo slide">&#8594;</button>
+      <div class="hc-dots js-dots"></div>
+    </div>
+    <div class="trust-row" style="justify-content:center; margin-top:30px;">
+      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Colhido em até 48h</div>
+      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Direto do produtor</div>
+      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Entrega em Maringá e região</div>
+    </div>
+  </div>
+</section>
+
+<div class="trust-strip">
+  <div class="wrap">
+    <div class="trust-mini"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg> Auditoria de origem independente</div>
+    <div class="trust-mini"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6"/><path d="M10 3v6.5L4.5 19a1 1 0 0 0 .87 1.5h13.26a1 1 0 0 0 .87-1.5L14 9.5V3"/></svg> Processo verificado por certificadora</div>
+    <div class="trust-mini"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg> Selo de qualidade auditado</div>
+    <div class="trust-mini"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Entrega rastreável em Maringá e região</div>
+  </div>
+</div>
+
+<section class="promise reveal">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow" style="color:#CDE0EA">A diferença tá no tempo</p>
+      <h2>Enquanto o ovo de prateleira já viajou semanas até chegar aí, o nosso ainda está morno do ninho.</h2>
+    </div>
+    <div>
+      <p><span class="stat">48h</span><br>é o tempo médio entre a colheita no sítio e a entrega na sua porta.</p>
+    </div>
+  </div>
+</section>
+
+<section id="certificacoes">
+  <div class="wrap">
+    <div class="section-head reveal" style="margin-left:auto; margin-right:auto; text-align:center;">
+      <p class="eyebrow">Qualidade comprovada</p>
+      <h2>Não é só a nossa palavra</h2>
+      <p>Nosso processo de produção passa por verificação de empresas especializadas independentes, focadas em origem e boas práticas — não somos nós que garantimos, é quem audita de fora.</p>
+    </div>
+    <div class="cert-grid">
+      <div class="cert-card reveal">
+        <div class="cert-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg></div>
+        <h3>AgroCert Brasil</h3>
+        <p>Auditoria independente de origem: confirma que os produtos realmente vêm do produtor declarado, sem intermediários ocultos.</p>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6"/><path d="M10 3v6.5L4.5 19a1 1 0 0 0 .87 1.5h13.26a1 1 0 0 0 .87-1.5L14 9.5V3"/></svg></div>
+        <h3>Instituto Campo Puro</h3>
+        <p>Verificação do processo de colheita, pasteurização e transporte, com visitas periódicas não avisadas à propriedade.</p>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg></div>
+        <h3>Selo Qualidade Auditada</h3>
+        <p>Reavaliação trimestral das condições de armazenamento e prazo entre colheita e entrega ao cliente final.</p>
+      </div>
+    </div>
+    <p class="cert-note">Certificações fictícias, criadas para fins didáticos — em um site real, use apenas selos de certificadoras existentes e verificáveis.</p>
+  </div>
+</section>
+
+<section class="section-alt" id="produtos">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Nossos produtos</p>
+      <h2>Três coisas. Feitas muito bem.</h2>
+      <p>Ovos, banana e, agora, leite fresco — sempre com a mesma promessa: direto do produtor, sem intermediário.</p>
+    </div>
+    <div class="products-grid">
+      <article class="product-card reveal" data-id="ovos" data-name="Dúzia de ovos caipiras" data-price="14.90">
+        
+      <div class="photo-frame">
+        <div class="photo-frame-inner photo-frame-real">
+          <img src="https://images.unsplash.com/photo-1509479100390-f83a8349e79c?auto=format&fit=crop&w=900&q=75" alt="Cesta de ovos caipiras frescos" loading="lazy">
+        </div>
+        <span class="photo-caption">Ovos caipiras</span>
+      </div>
+        <span class="badge" style="margin-top:16px;">OVOS CAIPIRAS</span>
+        <h3>Dúzia de ovos caipiras</h3>
+        <p class="desc">Galinhas criadas soltas, com ração natural. Gema mais alaranjada e sabor de verdade.</p>
+        <div class="product-foot">
+          <div class="price">R$ 14,90 <span>/ dúzia</span></div>
+          <button class="btn btn-outline js-add-cart" style="padding:10px 18px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 2-1.58l1.65-7.39H5.12"/></svg> Adicionar</button>
+        </div>
+      </article>
+      <article class="product-card reveal" data-id="banana" data-name="Cacho de banana nanica" data-price="9.90">
+        
+      <div class="photo-frame">
+        <div class="photo-frame-inner photo-frame-real">
+          <img src="https://images.unsplash.com/photo-1679255728321-88375291b36c?auto=format&fit=crop&w=900&q=75" alt="Cacho de banana nanica no pé" loading="lazy">
+        </div>
+        <span class="photo-caption">Banana nanica</span>
+      </div>
+        <span class="badge" style="margin-top:16px;">BANANA NANICA</span>
+        <h3>Banana nanica no ponto</h3>
+        <p class="desc">Colhida quase madura, sabor mais doce e textura mais macia que a de mercado.</p>
+        <div class="product-foot">
+          <div class="price">R$ 9,90 <span>/ cacho</span></div>
+          <button class="btn btn-outline js-add-cart" style="padding:10px 18px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 2-1.58l1.65-7.39H5.12"/></svg> Adicionar</button>
+        </div>
+      </article>
+      <article class="product-card reveal" data-id="leite" data-name="Leite fresco integral" data-price="8.90">
+        
+      <div class="photo-frame">
+        <div class="photo-frame-inner photo-frame-real">
+          <img src="https://images.unsplash.com/photo-1601436423474-51738541c1b1?auto=format&fit=crop&w=900&q=75" alt="Garrafa de vidro com leite fresco" loading="lazy">
+        </div>
+        <span class="photo-caption">Leite fresco</span>
+      </div>
+        <span class="badge" style="margin-top:16px;">NOVIDADE · LEITE</span>
+        <h3>Leite fresco integral</h3>
+        <p class="desc">Pasteurizado no mesmo dia, sem conservantes, em garrafa de vidro retornável.</p>
+        <div class="product-foot">
+          <div class="price">R$ 8,90 <span>/ litro</span></div>
+          <button class="btn btn-outline js-add-cart" style="padding:10px 18px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 2-1.58l1.65-7.39H5.12"/></svg> Adicionar</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="como-fazemos">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Como fazemos</p>
+      <h2>Do sítio até sua casa, passo a passo</h2>
+      <p>Sem segredo e sem pressa: mostramos exatamente como cada produto é colhido, preparado e entregue.</p>
+    </div>
+    <div class="process-grid">
+      <div class="reveal">
+        
+      <div class="photo-frame tall">
+        <div class="photo-frame-inner photo-frame-real">
+          <img src="https://images.unsplash.com/photo-1626906722163-bd4c03cb3b9b?auto=format&fit=crop&w=900&q=75" alt="Produtor trabalhando no campo" loading="lazy">
+        </div>
+        <span class="photo-caption">Foto ilustrativa do trabalho no campo</span>
+      </div>
+      </div>
+      <div class="reveal">
+        <div class="steps" style="grid-template-columns:1fr; gap:18px;">
+          <div class="step">
+            <div class="num">01</div>
+            <h3>Colheita ao amanhecer</h3>
+            <p>Ovos, banana e leite são colhidos ou ordenhados nas primeiras horas do dia, no ponto certo de frescor.</p>
+          </div>
+          <div class="step">
+            <div class="num">02</div>
+            <h3>Checagem e preparo</h3>
+            <p>Cada lote passa por conferência visual e de peso antes de seguir para a pasteurização (no caso do leite) ou embalagem.</p>
+          </div>
+          <div class="step">
+            <div class="num">03</div>
+            <h3>Saída para entrega</h3>
+            <p>Os pedidos saem do sítio já roteirizados por bairro, reduzindo o tempo entre colheita e a porta da sua casa.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Direto das nossas fotos</p>
+      <h2>O produto de perto</h2>
+      <p>Fotos de banco de imagens gratuito (Unsplash), usadas apenas como referência de composição — substitua pelos registros reais do sítio antes de publicar.</p>
+    </div>
+    <div class="photos-grid">
+      
+      <div class="photo-frame">
+        <div class="photo-frame-inner photo-frame-real">
+          <img src="https://images.unsplash.com/photo-1509479100390-f83a8349e79c?auto=format&fit=crop&w=900&q=75" alt="Cesta de ovos caipiras da semana" loading="lazy">
+        </div>
+        <span class="photo-caption">Ovos caipiras da semana</span>
+      </div>
+      
+      <div class="photo-frame">
+        <div class="photo-frame-inner photo-frame-real">
+          <img src="https://images.unsplash.com/photo-1679255728321-88375291b36c?auto=format&fit=crop&w=900&q=75" alt="Banana nanica recém colhida" loading="lazy">
+        </div>
+        <span class="photo-caption">Banana recém colhida</span>
+      </div>
+      
+      <div class="photo-frame">
+        <div class="photo-frame-inner photo-frame-real">
+          <img src="https://images.unsplash.com/photo-1601436423474-51738541c1b1?auto=format&fit=crop&w=900&q=75" alt="Garrafa de leite fresco engarrafado" loading="lazy">
+        </div>
+        <span class="photo-caption">Engarrafamento do leite</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="avaliacoes">
+  <div class="wrap">
+    <div class="section-head reveal" style="margin-left:auto; margin-right:auto; text-align:center;">
+      <p class="eyebrow">Quem já experimentou</p>
+      <h2>Avaliações dos clientes</h2>
+    </div>
+    <div class="rating-summary reveal">
+      <div>
+        <div class="score">4,9</div>
+        <div class="count">de 5 · 128 avaliações</div>
+      </div>
+      <div><span class="stars"><span class="star on"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"/></svg></span><span class="star on"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"/></svg></span><span class="star on"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"/></svg></span><span class="star on"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"/></svg></span><span class="star on"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"/></svg></span></span></div>
+    </div>
+    <div class="tc-wrap reveal" id="testimonialCarousel">
+      <div class="tc-track js-track">
+        <div class="tc-slide">
+          <div class="testimonial">
+            <span class="stars"><span class="star on"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"/></svg></span><span class="star on"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"/></svg></span><span class="star on"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"/></svg></span><span class="star on"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"/></svg></span><span class="star on"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"/></svg></span></span>
+            <p class="quote">"Nunca mais comprei ovo de mercado. A diferença de sabor é gritante, e a entrega é sempre no horário."</p>
+            <div class="who"><div class="avatar">C</div><div><div class="name">Carla M.</div><div class="loc">Maringá — Zona Norte</div></div></div>
+          </div>
+        </div>
+        <div class="tc-slide">
+          <div class="testimonial">
+            <span class="stars"><span class="star on"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"/></svg></span><span class="star on"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"/></svg></span><span class="star on"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"/></svg></span><span class="star on"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"/></svg></span><span class="star on"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"/></svg></span></span>
+            <p class="quote">"A banana chega no ponto certo, coisa que eu nunca conseguia achar em loja nenhuma. Assinatura vale muito a pena."</p>
+            <div class="who"><div class="avatar">R</div><div><div class="name">Rafael T.</div><div class="loc">Maringá — Centro</div></div></div>
+          </div>
+        </div>
+        <div class="tc-slide">
+          <div class="testimonial">
+            <span class="stars"><span class="star on"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"/></svg></span><span class="star on"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"/></svg></span><span class="star on"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"/></svg></span><span class="star on"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"/></svg></span><span class="star"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"/></svg></span></span>
+            <p class="quote">"Testei o leite assim que lançou e virou item fixo da assinatura lá em casa. Sabor muito mais encorpado."</p>
+            <div class="who"><div class="avatar">J</div><div><div class="name">Juliana P.</div><div class="loc">Maringá — Zona Sul</div></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="tc-controls">
+        <button class="tc-arrow js-prev" aria-label="Depoimento anterior">&#8592;</button>
+        <div class="tc-dots js-dots"></div>
+        <button class="tc-arrow js-next" aria-label="Próximo depoimento">&#8594;</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt" id="rastreio">
+  <div class="wrap">
+    <div class="section-head reveal" style="margin-left:auto; margin-right:auto; text-align:center;">
+      <p class="eyebrow">Já é cliente?</p>
+      <h2>Acompanhe seu pedido</h2>
+      <p>Digite o número do seu pedido para ver o status da entrega em tempo real.</p>
+    </div>
+    <div class="tracker-card reveal">
+      <div class="tracker-form">
+        <input type="text" id="trackInput" placeholder="Ex: STM-00123">
+        <button class="btn btn-primary" id="trackBtn">Rastrear pedido</button>
+      </div>
+      <p class="tracker-hint">Demonstração para fins didáticos — em um site real, este número viria do sistema de pedidos.</p>
+      <div class="tracker-steps" id="trackerSteps">
+        <div class="t-step done"><div class="t-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div><p>Pedido recebido</p></div>
+        <div class="t-step done"><div class="t-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div><p>Em preparo</p></div>
+        <div class="t-step current"><div class="t-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5v8h1"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></div><p>A caminho</p></div>
+        <div class="t-step"><div class="t-dot"></div><p>Entregue</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta-final reveal">
+      <div>
+        <p class="eyebrow" style="color:#CDE0EA">Fique por dentro</p>
+        <h2>Quer saber quando chegam novos produtos?</h2>
+        <p>Deixe seu e-mail e avisamos sobre novidades, safras especiais e vagas na assinatura.</p>
+      </div>
+      <div class="newsletter">
+        <label for="email">Seu melhor e-mail</label>
+        <form onsubmit="return false;">
+          <input type="email" id="email" placeholder="voce@email.com" required>
+          <button class="btn btn-primary btn-shimmer" type="submit">Quero receber</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="logo">Sítio Três Manhãs</div>
+        <p>Ovos caipiras, banana nanica e leite fresco direto do produtor pra sua casa. Sem atravessador, sem prateleira.</p>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="tel:+5544999990000">(44) 99999-0000</a></li>
+          <li><a href="mailto:contato@sitiotresmanhas.com.br">contato@sitiotresmanhas.com.br</a></li>
+          <li><a href="#">Instagram @sitiotresmanhas</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Sítio Três Manhãs — Produto fictício para fins didáticos.</span>
+      <span>Feito para a turma praticar marketing na prática.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- CARRINHO -->
+<button class="cart-fab" id="cartFab" aria-label="Abrir carrinho">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 2-1.58l1.65-7.39H5.12"/></svg>
+  <span class="cart-count" id="cartCount">0</span>
+</button>
+<div class="cart-overlay" id="cartOverlay"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-drawer-head">
+    <h3>Seu carrinho</h3>
+    <button class="cart-drawer-close" id="cartClose">&times;</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty">Seu carrinho está vazio.<br>Adicione produtos para montar sua cesta.</div>
+  </div>
+  <div class="cart-drawer-foot">
+    <div class="cart-delivery-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5v8h1"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg> Entrega em Maringá e região (PR)</div>
+    <div class="cart-total"><span>Total</span><span id="cartTotal">R$ 0,00</span></div>
+    <button class="btn btn-primary btn-shimmer" style="width:100%;" id="cartCheckout">Finalizar pedido</button>
+  </div>
+</div>
+
+<!-- CHAT HUMANIZADO -->
+<button class="chat-fab" id="chatFab">
+  <span class="chat-avatar">M</span>
+  <span class="chat-label">Fale com a gente</span>
+</button>
+<div class="chat-panel" id="chatPanel">
+  <div class="chat-head">
+    <div class="chat-avatar">M</div>
+    <div>
+      <p>Marina · Atendimento</p>
+      <p>online agora</p>
+    </div>
+    <button class="chat-close" id="chatClose">&times;</button>
+  </div>
+  <div class="chat-body" id="chatBody">
+    <div class="chat-msg bot">Oi! Sou a Marina, do atendimento do Sítio Três Manhãs 🌾 Como posso te ajudar hoje?</div>
+  </div>
+  <div class="chat-input-row">
+    <input type="text" id="chatInput" placeholder="Escreva sua mensagem...">
+    <button id="chatSend">Enviar</button>
+  </div>
+</div>
+
+<script>
+
+// menu mobile
+const toggle = document.getElementById('menuToggle');
+const links = document.getElementById('navLinks');
+if(toggle){ toggle.addEventListener('click', () => links.classList.toggle('open')); }
+if(links){ links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open'))); }
+
+// header shadow on scroll
+const header = document.getElementById('siteHeader');
+window.addEventListener('scroll', () => {
+  if(header){ header.classList.toggle('scrolled', window.scrollY > 10); }
+});
+
+// scroll reveal
+const revealEls = document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+} else {
+  revealEls.forEach(el => el.classList.add('visible'));
+}
+
+// generic carousel factory
+function initCarousel(rootId, opts={}){
+  const root = document.getElementById(rootId);
+  if(!root) return;
+  const track = root.querySelector('.js-track');
+  const slides = Array.from(track.children);
+  const dotsWrap = root.querySelector('.js-dots');
+  const prevBtn = root.querySelector('.js-prev');
+  const nextBtn = root.querySelector('.js-next');
+  let idx = 0;
+  let timer = null;
+
+  if(dotsWrap){
+    const dotClass = opts.dotClass || 'hc-dot';
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = dotClass + (i===0?' active':'');
+      dot.setAttribute('aria-label', 'Ir para slide ' + (i+1));
+      dot.addEventListener('click', () => go(i));
+      dotsWrap.appendChild(dot);
+    });
+  }
+
+  function update(){
+    track.style.transform = 'translateX(-' + (idx*100) + '%)';
+    if(dotsWrap){
+      Array.from(dotsWrap.children).forEach((d,i) => d.classList.toggle('active', i===idx));
+    }
+  }
+  function go(i){ idx = (i+slides.length)%slides.length; update(); resetTimer(); }
+  function next(){ go(idx+1); }
+  function prev(){ go(idx-1); }
+  function resetTimer(){
+    if(!opts.autoplay) return;
+    clearInterval(timer);
+    timer = setInterval(next, opts.interval || 6000);
+  }
+  if(prevBtn) prevBtn.addEventListener('click', prev);
+  if(nextBtn) nextBtn.addEventListener('click', next);
+  update();
+  resetTimer();
+}
+
+// accordion
+document.querySelectorAll('.acc-item').forEach(item => {
+  const head = item.querySelector('.acc-head');
+  const body = item.querySelector('.acc-body');
+  head.addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.acc-item.open').forEach(o => {
+      if(o!==item){ o.classList.remove('open'); o.querySelector('.acc-body').style.maxHeight = null; }
+    });
+    item.classList.toggle('open', !isOpen);
+    body.style.maxHeight = !isOpen ? body.scrollHeight + 'px' : null;
+  });
+});
+
+// product tab filter
+const tabBtns = document.querySelectorAll('.tab-btn');
+if(tabBtns.length){
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      document.querySelectorAll('[data-cat]').forEach(card => {
+        card.classList.toggle('hide', filter!=='todos' && card.dataset.cat!==filter);
+      });
+    });
+  });
+}
+
+initCarousel('heroCarousel', { autoplay:true, interval:6000, dotClass:'hc-dot' });
+initCarousel('testimonialCarousel', { autoplay:true, interval:7000, dotClass:'tc-dot' });
+
+// ---- carrinho ----
+const cart = {};
+const cartCountEl = document.getElementById('cartCount');
+const cartItemsEl = document.getElementById('cartItems');
+const cartTotalEl = document.getElementById('cartTotal');
+const cartDrawer = document.getElementById('cartDrawer');
+const cartOverlay = document.getElementById('cartOverlay');
+
+function fmt(v){ return 'R$ ' + v.toFixed(2).replace('.', ','); }
+
+function renderCart(){
+  const ids = Object.keys(cart);
+  if(ids.length === 0){
+    cartItemsEl.innerHTML = '<div class="cart-empty">Seu carrinho está vazio.<br>Adicione produtos para montar sua cesta.</div>';
+  } else {
+    cartItemsEl.innerHTML = ids.map(id => {
+      const it = cart[id];
+      return '<div class="cart-item">' +
+        '<div class="cart-item-icon">🧺</div>' +
+        '<div class="cart-item-info"><div class="name">' + it.name + '</div><div class="price">' + fmt(it.price) + ' un.</div></div>' +
+        '<div class="cart-qty">' +
+          '<button data-act="dec" data-id="' + id + '">−</button>' +
+          '<span>' + it.qty + '</span>' +
+          '<button data-act="inc" data-id="' + id + '">+</button>' +
+        '</div>' +
+      '</div>';
+    }).join('');
+  }
+  const total = ids.reduce((s, id) => s + cart[id].price * cart[id].qty, 0);
+  const count = ids.reduce((s, id) => s + cart[id].qty, 0);
+  cartTotalEl.textContent = fmt(total);
+  cartCountEl.textContent = count;
+  cartCountEl.classList.remove('bump');
+  void cartCountEl.offsetWidth;
+  cartCountEl.classList.add('bump');
+}
+
+document.querySelectorAll('.js-add-cart').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const card = btn.closest('[data-id]');
+    const id = card.dataset.id;
+    const name = card.dataset.name;
+    const price = parseFloat(card.dataset.price);
+    if(!cart[id]) cart[id] = { name, price, qty: 0 };
+    cart[id].qty++;
+    renderCart();
+    openCart();
+  });
+});
+
+cartItemsEl.addEventListener('click', (e) => {
+  const btn = e.target.closest('button[data-act]');
+  if(!btn) return;
+  const id = btn.dataset.id;
+  if(btn.dataset.act === 'inc') cart[id].qty++;
+  if(btn.dataset.act === 'dec'){ cart[id].qty--; if(cart[id].qty <= 0) delete cart[id]; }
+  renderCart();
+});
+
+function openCart(){ cartDrawer.classList.add('open'); cartOverlay.classList.add('open'); }
+function closeCart(){ cartDrawer.classList.remove('open'); cartOverlay.classList.remove('open'); }
+document.getElementById('cartFab').addEventListener('click', openCart);
+document.getElementById('cartClose').addEventListener('click', closeCart);
+cartOverlay.addEventListener('click', closeCart);
+document.getElementById('cartCheckout').addEventListener('click', () => {
+  if(Object.keys(cart).length === 0){ alert('Seu carrinho está vazio.'); return; }
+  alert('Demonstração: em um site real, este botão levaria para o pagamento. Pedido de exemplo registrado!');
+});
+
+// ---- chat humanizado ----
+const chatFab = document.getElementById('chatFab');
+const chatPanel = document.getElementById('chatPanel');
+const chatBody = document.getElementById('chatBody');
+const chatInput = document.getElementById('chatInput');
+chatFab.addEventListener('click', () => { chatPanel.classList.add('open'); chatFab.style.display = 'none'; });
+document.getElementById('chatClose').addEventListener('click', () => { chatPanel.classList.remove('open'); chatFab.style.display = 'flex'; });
+function sendChat(){
+  const val = chatInput.value.trim();
+  if(!val) return;
+  const userMsg = document.createElement('div');
+  userMsg.className = 'chat-msg user';
+  userMsg.textContent = val;
+  chatBody.appendChild(userMsg);
+  chatInput.value = '';
+  chatBody.scrollTop = chatBody.scrollHeight;
+  setTimeout(() => {
+    const botMsg = document.createElement('div');
+    botMsg.className = 'chat-msg bot';
+    botMsg.textContent = 'Obrigada pela mensagem! Nossa equipe responde em até 1 hora no horário comercial (demonstração).';
+    chatBody.appendChild(botMsg);
+    chatBody.scrollTop = chatBody.scrollHeight;
+  }, 900);
+}
+document.getElementById('chatSend').addEventListener('click', sendChat);
+chatInput.addEventListener('keydown', (e) => { if(e.key === 'Enter') sendChat(); });
+
+// ---- rastreio de pedido (demo) ----
+document.getElementById('trackBtn').addEventListener('click', () => {
+  const val = document.getElementById('trackInput').value.trim();
+  const steps = document.getElementById('trackerSteps');
+  if(!val){ alert('Digite um número de pedido para simular o rastreio.'); return; }
+  steps.classList.add('show');
+  steps.scrollIntoView({ behavior:'smooth', block:'center' });
+});
+
+</script>
+</body>
+</html>

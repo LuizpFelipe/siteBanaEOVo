@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sobre — Sítio Três Manhãs</title>
+<meta name="description" content="Conheça a história do Sítio Três Manhãs, nossos valores e como chegamos até o leite fresco, nosso produto mais recente.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:      #F4EDE0;
+  --cream-2:    #E9DFC7;
+  --milk:       #FFFDF9;
+  --milk-2:     #F1ECDD;
+  --yolk:       #C89B3C;
+  --yolk-dark:  #A67C2E;
+  --banana:     #D9B25C;
+  --leaf:       #3D5A73;
+  --leaf-2:     #2C4155;
+  --soil:       #33291F;
+  --soil-60:    #6B5D4C;
+  --crate:      #A9754F;
+  --kraft:      #E3D6BC;
+  --white:      #FFFDF9;
+  --radius:     18px;
+  --shadow:     0 12px 30px rgba(51,41,31,0.12);
+}
+*{ box-sizing:border-box; margin:0; padding:0; }
+html{ scroll-behavior:smooth; }
+body{
+  background:var(--cream);
+  color:var(--soil);
+  font-family:'Work Sans', sans-serif;
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{ font-family:'Fraunces', serif; color:var(--soil); line-height:1.1; font-weight:600; }
+a{ color:inherit; text-decoration:none; }
+img,svg{ display:block; max-width:100%; }
+ul{ list-style:none; }
+.eyebrow{ font-family:'IBM Plex Mono', monospace; font-size:0.78rem; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:var(--yolk-dark); }
+.wrap{ max-width:1180px; margin:0 auto; padding:0 28px; }
+.btn{ display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:14px 26px; border-radius:999px; font-family:'Work Sans', sans-serif; font-weight:600; font-size:0.98rem; cursor:pointer; border:2px solid transparent; transition:transform .18s ease, box-shadow .18s ease, background .18s ease; }
+.btn:focus-visible{ outline:3px solid var(--leaf); outline-offset:3px; }
+.btn-primary{ background:var(--yolk); color:var(--white); box-shadow:0 8px 20px rgba(226,146,39,0.35); }
+.btn-primary:hover{ transform:translateY(-2px); background:var(--yolk-dark); }
+.btn-outline{ background:transparent; border-color:var(--soil); color:var(--soil); }
+.btn-outline:hover{ background:var(--soil); color:var(--white); }
+.btn-light{ background:var(--white); color:var(--leaf-2); }
+.btn-light:hover{ transform:translateY(-2px); }
+
+/* header */
+header{ position:sticky; top:0; z-index:50; background:rgba(251,239,212,0.92); backdrop-filter:blur(6px); border-bottom:1px solid rgba(58,46,34,0.08); transition:box-shadow .2s ease; }
+header.scrolled{ box-shadow:0 6px 18px rgba(58,46,34,0.08); }
+.nav{ display:flex; align-items:center; justify-content:space-between; padding:18px 28px; }
+.logo{ font-family:'Fraunces', serif; font-weight:700; font-size:1.2rem; display:flex; align-items:center; gap:8px; white-space:nowrap; }
+.logo .dot{ color:var(--yolk); }
+.nav-links{ display:flex; align-items:center; gap:34px; font-weight:500; font-size:0.96rem; }
+.nav-links a{ position:relative; padding:4px 0; }
+.nav-links a::after{ content:""; position:absolute; left:0; bottom:-2px; width:0; height:2px; background:var(--yolk); transition:width .2s ease; }
+.nav-links a:hover::after, .nav-links a.active::after{ width:100%; }
+.nav-links a.active{ color:var(--yolk-dark); }
+.nav-cta{ display:flex; align-items:center; gap:18px; }
+.menu-toggle{ display:none; background:none; border:none; font-size:1.6rem; cursor:pointer; color:var(--soil); }
+@media(max-width:860px){
+  .nav-links{ position:absolute; top:100%; left:0; right:0; background:var(--cream); flex-direction:column; align-items:flex-start; padding:20px 28px; gap:16px; border-bottom:1px solid rgba(58,46,34,0.08); display:none; }
+  .nav-links.open{ display:flex; }
+  .menu-toggle{ display:block; }
+}
+@media(max-width:480px){
+  .nav{ padding:16px 20px; } .logo{ font-size:1rem; } .nav-cta{ gap:10px; } .nav-cta .btn-primary{ padding:10px 16px; font-size:0.85rem; }
+}
+
+/* page hero (inner pages) */
+.page-hero{ padding:56px 0 40px; }
+.page-hero .eyebrow{ margin-bottom:10px; }
+.page-hero h1{ font-size:clamp(2rem,4vw,2.9rem); max-width:20ch; }
+.page-hero p{ color:var(--soil-60); max-width:56ch; margin-top:14px; font-size:1.05rem; }
+.crumb{ font-family:'IBM Plex Mono', monospace; font-size:0.78rem; color:var(--soil-60); margin-bottom:14px; }
+.crumb a:hover{ color:var(--yolk-dark); }
+
+section{ padding:84px 0; }
+.section-head{ max-width:640px; margin-bottom:48px; }
+.section-head h2{ font-size:clamp(1.9rem,3.4vw,2.5rem); margin-top:10px; }
+.section-head p{ color:var(--soil-60); margin-top:12px; font-size:1.05rem; }
+.section-alt{ background:var(--cream-2); }
+
+/* reveal on scroll */
+.reveal{ opacity:0; transform:translateY(24px); transition:opacity .6s ease, transform .6s ease; }
+.reveal.visible{ opacity:1; transform:translateY(0); }
+@media (prefers-reduced-motion: reduce){ .reveal{ opacity:1; transform:none; transition:none; } }
+
+/* ---- HERO CAROUSEL ---- */
+.hero-carousel{ position:relative; overflow:hidden; border-radius:24px; background:var(--leaf); }
+.hc-track{ display:flex; transition:transform .6s cubic-bezier(.65,0,.35,1); }
+.hc-slide{ min-width:100%; display:grid; grid-template-columns:1.05fr 0.95fr; gap:40px; align-items:center; padding:64px 56px; }
+.hc-slide .eyebrow{ color:var(--banana); }
+.hc-slide h2{ color:var(--white); font-size:clamp(1.9rem,3.6vw,2.7rem); margin:12px 0 16px; }
+.hc-slide p{ color:#E4EEE1; max-width:44ch; margin-bottom:24px; }
+.hc-art{ display:flex; justify-content:center; }
+.hc-dots{ position:absolute; bottom:20px; left:50%; transform:translateX(-50%); display:flex; gap:10px; z-index:5; }
+.hc-dot{ width:9px; height:9px; border-radius:50%; background:rgba(255,255,255,0.4); border:none; cursor:pointer; padding:0; transition:background .2s ease, transform .2s ease; }
+.hc-dot.active{ background:var(--banana); transform:scale(1.3); }
+.hc-arrow{ position:absolute; top:50%; transform:translateY(-50%); width:42px; height:42px; border-radius:50%; background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.3); color:var(--white); font-size:1.1rem; cursor:pointer; z-index:5; display:flex; align-items:center; justify-content:center; transition:background .2s ease; }
+.hc-arrow:hover{ background:rgba(255,255,255,0.3); }
+.hc-arrow.prev{ left:18px; } .hc-arrow.next{ right:18px; }
+@media(max-width:760px){ .hc-slide{ grid-template-columns:1fr; padding:44px 24px 70px; text-align:left; } .hc-art{ order:-1; max-width:220px; } .hc-arrow{ top:auto; bottom:16px; transform:none; width:36px; height:36px; } .hc-arrow.prev{ left:16px; } .hc-arrow.next{ right:16px; } .hc-dots{ bottom:26px; } }
+
+/* trust row */
+.trust-row{ display:flex; gap:26px; flex-wrap:wrap; margin-top:26px; }
+.trust-item{ display:flex; align-items:center; gap:8px; font-size:0.86rem; font-weight:600; color:var(--leaf-2); }
+.trust-item svg{ width:18px; height:18px; flex-shrink:0; }
+
+/* products */
+.products-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:26px; }
+.product-card{ background:var(--white); border:1px solid rgba(58,46,34,0.1); border-radius:var(--radius); padding:30px 26px 26px; position:relative; box-shadow:var(--shadow); transition:transform .25s ease, box-shadow .25s ease; }
+.product-card:hover{ transform:translateY(-6px); box-shadow:0 20px 40px rgba(58,46,34,0.18); }
+.product-card .badge{ display:inline-block; font-family:'IBM Plex Mono', monospace; font-size:0.68rem; font-weight:600; letter-spacing:0.08em; background:var(--cream-2); color:var(--yolk-dark); padding:6px 12px; border-radius:999px; margin-bottom:14px; }
+.product-card h3{ font-size:1.3rem; margin-bottom:8px; }
+.product-card p.desc{ color:var(--soil-60); margin-bottom:16px; font-size:0.95rem; }
+.product-card ul{ display:flex; flex-direction:column; gap:8px; margin-bottom:18px; }
+.product-card li{ display:flex; gap:8px; font-size:0.88rem; align-items:flex-start; }
+.product-card li svg{ width:16px; height:16px; flex-shrink:0; margin-top:3px; color:var(--yolk-dark); }
+.product-foot{ display:flex; align-items:center; justify-content:space-between; border-top:1px dashed rgba(58,46,34,0.2); padding-top:16px; }
+.product-foot .price{ font-family:'IBM Plex Mono', monospace; font-weight:600; color:var(--soil); }
+.product-foot .price span{ color:var(--soil-60); font-weight:500; font-size:0.82rem; }
+.product-art{ height:120px; display:flex; align-items:center; justify-content:center; margin-bottom:14px; }
+
+/* tabs */
+.tabs{ display:flex; gap:10px; flex-wrap:wrap; margin-bottom:36px; }
+.tab-btn{ font-family:'IBM Plex Mono', monospace; font-size:0.82rem; font-weight:600; letter-spacing:0.04em; padding:10px 18px; border-radius:999px; border:2px solid rgba(58,46,34,0.15); background:transparent; color:var(--soil-60); cursor:pointer; transition:all .2s ease; }
+.tab-btn:hover{ border-color:var(--yolk); color:var(--yolk-dark); }
+.tab-btn.active{ background:var(--soil); border-color:var(--soil); color:var(--white); }
+.hide{ display:none !important; }
+
+/* steps */
+.steps{ display:grid; grid-template-columns:repeat(3,1fr); gap:26px; }
+.step{ background:var(--white); border-radius:var(--radius); padding:30px 26px; box-shadow:var(--shadow); position:relative; transition:transform .25s ease; }
+.step:hover{ transform:translateY(-4px); }
+.step .num{ font-family:'Fraunces', serif; font-size:2.2rem; font-weight:700; color:var(--yolk); margin-bottom:14px; }
+.step h3{ font-size:1.15rem; margin-bottom:8px; }
+.step p{ color:var(--soil-60); font-size:0.95rem; }
+
+/* testimonial carousel */
+.tc-wrap{ position:relative; max-width:760px; margin:0 auto; }
+.tc-track{ display:flex; transition:transform .5s ease; }
+.tc-slide{ min-width:100%; padding:0 8px; }
+.testimonial{ background:var(--white); border-radius:var(--radius); padding:36px 34px; border-left:4px solid var(--yolk); box-shadow:var(--shadow); }
+.testimonial p.quote{ font-size:1.15rem; margin-bottom:20px; color:var(--soil); font-family:'Fraunces', serif; font-style:italic; }
+.testimonial .who{ display:flex; align-items:center; gap:12px; }
+.avatar{ width:44px; height:44px; border-radius:50%; background:var(--leaf); color:var(--white); display:flex; align-items:center; justify-content:center; font-family:'Fraunces', serif; font-weight:600; }
+.who .name{ font-weight:600; font-size:0.94rem; }
+.who .loc{ font-size:0.82rem; color:var(--soil-60); }
+.tc-controls{ display:flex; justify-content:center; gap:14px; margin-top:24px; align-items:center; }
+.tc-arrow{ width:38px; height:38px; border-radius:50%; border:1px solid rgba(58,46,34,0.2); background:var(--white); cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background .2s ease; }
+.tc-arrow:hover{ background:var(--cream-2); }
+.tc-dots{ display:flex; gap:8px; }
+.tc-dot{ width:8px; height:8px; border-radius:50%; background:rgba(58,46,34,0.2); border:none; cursor:pointer; padding:0; }
+.tc-dot.active{ background:var(--yolk); }
+
+/* baskets */
+.baskets-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:26px; align-items:stretch; }
+.basket{ background:var(--white); border:1px solid rgba(58,46,34,0.1); border-radius:var(--radius); padding:32px 28px; display:flex; flex-direction:column; box-shadow:var(--shadow); transition:transform .25s ease; }
+.basket:hover{ transform:translateY(-6px); }
+.basket.featured{ background:var(--soil); color:var(--white); transform:translateY(-10px); box-shadow:0 18px 40px rgba(58,46,34,0.28); }
+.basket.featured:hover{ transform:translateY(-14px); }
+.basket.featured .basket-price, .basket.featured h3{ color:var(--white); }
+.basket.featured p, .basket.featured li{ color:#E6DDCF; }
+.basket .tag-featured{ align-self:flex-start; background:var(--yolk); color:var(--white); font-family:'IBM Plex Mono', monospace; font-size:0.68rem; font-weight:600; letter-spacing:0.08em; padding:5px 10px; border-radius:999px; margin-bottom:14px; }
+.basket h3{ font-size:1.25rem; margin-bottom:6px; }
+.basket-price{ font-family:'Fraunces', serif; font-size:2.1rem; font-weight:700; margin:10px 0 4px; color:var(--soil); }
+.basket-price span{ font-size:0.95rem; font-family:'Work Sans'; font-weight:400; color:var(--soil-60); }
+.basket ul{ margin:20px 0 26px; display:flex; flex-direction:column; gap:10px; flex-grow:1; }
+.basket li{ font-size:0.92rem; display:flex; gap:8px; }
+.basket li svg{ width:16px; height:16px; color:var(--yolk-dark); flex-shrink:0; margin-top:3px; }
+.basket.featured li svg{ color:var(--banana); }
+
+/* accordion */
+.accordion{ max-width:760px; margin:0 auto; display:flex; flex-direction:column; gap:14px; }
+.acc-item{ background:var(--white); border-radius:14px; box-shadow:var(--shadow); overflow:hidden; }
+.acc-head{ display:flex; align-items:center; justify-content:space-between; padding:20px 24px; cursor:pointer; font-weight:600; }
+.acc-head .plus{ font-size:1.3rem; color:var(--yolk-dark); transition:transform .25s ease; }
+.acc-item.open .acc-head .plus{ transform:rotate(45deg); }
+.acc-body{ max-height:0; overflow:hidden; transition:max-height .3s ease; }
+.acc-body-inner{ padding:0 24px 20px; color:var(--soil-60); font-size:0.95rem; }
+
+/* timeline (sobre) */
+.timeline{ position:relative; max-width:760px; margin:0 auto; padding-left:30px; border-left:2px solid var(--kraft); }
+.tl-item{ position:relative; padding-bottom:36px; }
+.tl-item:last-child{ padding-bottom:0; }
+.tl-item::before{ content:""; position:absolute; left:-38px; top:2px; width:14px; height:14px; border-radius:50%; background:var(--yolk); border:3px solid var(--cream); }
+.tl-item .year{ font-family:'IBM Plex Mono', monospace; font-size:0.78rem; color:var(--yolk-dark); font-weight:600; }
+.tl-item h3{ font-size:1.1rem; margin:6px 0; }
+.tl-item p{ color:var(--soil-60); font-size:0.94rem; }
+
+/* values */
+.values-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.value-card{ text-align:left; }
+.value-card .icon{ width:52px; height:52px; border-radius:14px; background:var(--cream-2); display:flex; align-items:center; justify-content:center; margin-bottom:16px; }
+.value-card .icon svg{ width:26px; height:26px; color:var(--leaf); }
+.value-card h3{ font-size:1.1rem; margin-bottom:6px; }
+.value-card p{ color:var(--soil-60); font-size:0.94rem; }
+
+/* contact page */
+.contact-grid{ display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:start; }
+.form-card{ background:var(--white); border-radius:var(--radius); padding:32px; box-shadow:var(--shadow); }
+.form-row{ margin-bottom:18px; display:flex; flex-direction:column; gap:6px; }
+.form-row label{ font-size:0.85rem; font-weight:600; color:var(--soil); }
+.form-row input, .form-row textarea, .form-row select{ padding:12px 14px; border-radius:10px; border:1.5px solid rgba(58,46,34,0.18); font-family:'Work Sans', sans-serif; font-size:0.95rem; background:var(--milk); }
+.form-row input:focus, .form-row textarea:focus, .form-row select:focus{ outline:none; border-color:var(--yolk); }
+.info-card{ background:var(--leaf); color:var(--white); border-radius:var(--radius); padding:32px; margin-bottom:20px; }
+.info-card h3{ color:var(--white); font-size:1.15rem; margin-bottom:14px; }
+.info-row{ display:flex; gap:12px; margin-bottom:12px; font-size:0.94rem; color:#DCE7DC; }
+.info-row svg{ width:18px; height:18px; flex-shrink:0; color:var(--banana); margin-top:2px; }
+.map-block{ height:220px; border-radius:var(--radius); background:repeating-linear-gradient(45deg, var(--kraft), var(--kraft) 12px, var(--cream-2) 12px, var(--cream-2) 24px); display:flex; align-items:center; justify-content:center; color:var(--soil-60); font-family:'IBM Plex Mono', monospace; font-size:0.82rem; text-align:center; padding:20px; }
+
+/* cta final */
+.cta-final{ background:linear-gradient(135deg, var(--leaf) 0%, var(--leaf-2) 100%); color:var(--white); border-radius:24px; padding:56px 48px; display:grid; grid-template-columns:1.2fr 1fr; gap:36px; align-items:center; }
+.cta-final h2{ color:var(--white); font-size:clamp(1.7rem,3vw,2.2rem); margin-bottom:12px; }
+.cta-final p{ color:#DCE7DC; max-width:44ch; }
+.newsletter{ background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); border-radius:14px; padding:22px; }
+.newsletter label{ font-size:0.8rem; font-weight:600; display:block; margin-bottom:10px; color:var(--banana); font-family:'IBM Plex Mono', monospace; letter-spacing:0.06em; }
+.newsletter form{ display:flex; gap:10px; flex-wrap:wrap; }
+.newsletter input{ flex:1; min-width:160px; padding:12px 14px; border-radius:10px; border:none; font-family:'Work Sans', sans-serif; font-size:0.95rem; }
+.newsletter input:focus-visible{ outline:3px solid var(--banana); }
+
+/* promise band */
+.promise{ background:var(--leaf); color:var(--white); padding:54px 0; }
+.promise .wrap{ display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; }
+.promise h2{ color:var(--white); font-size:clamp(1.6rem,3vw,2.1rem); }
+.promise p{ color:#DCE7DC; font-size:1.02rem; max-width:48ch; }
+.promise .stat{ font-family:'Fraunces', serif; font-size:2.6rem; color:var(--banana); font-weight:700; }
+
+/* footer */
+footer{ background:var(--soil); color:#E6DDCF; padding:54px 0 28px; margin-top:40px; }
+.footer-grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px; margin-bottom:36px; }
+footer h4{ font-family:'IBM Plex Mono', monospace; font-size:0.78rem; letter-spacing:0.1em; color:var(--banana); margin-bottom:16px; text-transform:uppercase; }
+footer .logo{ color:var(--white); margin-bottom:12px; }
+footer p{ font-size:0.92rem; color:#C9BFAE; max-width:36ch; }
+footer ul{ display:flex; flex-direction:column; gap:10px; }
+footer a{ font-size:0.92rem; color:#E6DDCF; }
+footer a:hover{ color:var(--banana); }
+.footer-bottom{ border-top:1px solid rgba(255,255,255,0.12); padding-top:22px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-size:0.82rem; color:#B3A996; }
+
+@media(max-width:900px){
+  .hero-grid, .promise .wrap, .products-grid, .steps, .baskets-grid, .cta-final, .footer-grid, .contact-grid, .values-grid{ grid-template-columns:1fr; }
+  .basket.featured{ transform:none; }
+  .cta-final{ padding:40px 26px; }
+  section{ padding:60px 0; }
+}
+@media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } *{ transition:none !important; } }
+</style>
+</head>
+<body>
+<header id="siteHeader">
+  <nav class="nav wrap">
+    <a href="index.html" class="logo">Sítio <span class="dot">Três</span> Manhãs</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="produtos.html">Produtos</a></li>
+      <li><a href="sobre.html" class="active">Sobre</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="produtos.html#cestas" class="btn btn-primary">Fazer pedido</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">&#9776;</button>
+    </div>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <p class="crumb"><a href="index.html">Início</a> / Sobre</p>
+    <p class="eyebrow">Nossa história</p>
+    <h1>Um sítio pequeno, um compromisso grande</h1>
+    <p>O Sítio Três Manhãs nasceu de uma pergunta simples: por que é tão difícil encontrar ovo, banana e leite frescos de verdade perto de casa? Resolvemos criar a resposta.</p>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="values-grid">
+      <div class="value-card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div>
+        <h3>Produção consciente</h3>
+        <p>Galinhas soltas, bananeiras sem agrotóxico e vacas criadas a pasto — do jeito que a natureza pede.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 12H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h7"/><path d="M14.5 9.5 21 3"/><path d="M15 3h6v6"/></svg></div>
+        <h3>Sem atravessador</h3>
+        <p>Vendemos direto pra você. Isso significa preço mais justo pro produtor e produto mais fresco pro cliente.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <h3>Tempo é ingrediente</h3>
+        <p>Colhemos, pasteurizamos e entregamos no menor tempo possível. Frescor não se compra pronto, se organiza.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="wrap">
+    <div class="section-head reveal" style="margin-left:auto; margin-right:auto; text-align:center;">
+      <p class="eyebrow">Linha do tempo</p>
+      <h2>Como o Sítio Três Manhãs foi crescendo</h2>
+    </div>
+    <div class="timeline reveal">
+      <div class="tl-item">
+        <div class="year">2022</div>
+        <h3>Os primeiros ovos</h3>
+        <p>Começamos vendendo dúzias de ovos caipiras para vizinhos, direto do quintal de casa.</p>
+      </div>
+      <div class="tl-item">
+        <div class="year">2023</div>
+        <h3>A banana entra no cacho</h3>
+        <p>Com a parceria de um produtor vizinho, passamos a entregar também banana nanica colhida no ponto.</p>
+      </div>
+      <div class="tl-item">
+        <div class="year">2024</div>
+        <h3>Nasce a assinatura semanal</h3>
+        <p>Criamos as cestas por assinatura para quem não queria ficar pedindo toda semana.</p>
+      </div>
+      <div class="tl-item">
+        <div class="year">2026</div>
+        <h3>Chegada do leite fresco</h3>
+        <p>Ampliamos a produção e passamos a oferecer leite integral pasteurizado no mesmo dia, em garrafa retornável.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta-final reveal">
+      <div>
+        <p class="eyebrow" style="color:#BFE0BF">Quer conhecer de perto?</p>
+        <h2>Venha ver de onde vem o que você come</h2>
+        <p>Organizamos visitas guiadas ao sítio para clientes da assinatura. Fale com a gente para agendar.</p>
+      </div>
+      <div class="newsletter">
+        <a href="contato.html" class="btn btn-light" style="width:100%; justify-content:center;">Falar com a gente</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="logo">Sítio Três Manhãs</div>
+        <p>Ovos caipiras, banana nanica e leite fresco direto do produtor pra sua casa. Sem atravessador, sem prateleira.</p>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="tel:+5544999990000">(44) 99999-0000</a></li>
+          <li><a href="mailto:contato@sitiotresmanhas.com.br">contato@sitiotresmanhas.com.br</a></li>
+          <li><a href="#">Instagram @sitiotresmanhas</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Sítio Três Manhãs — Produto fictício para fins didáticos.</span>
+      <span>Feito para a turma praticar marketing na prática.</span>
+    </div>
+  </div>
+</footer>
+<script>
+
+// menu mobile
+const toggle = document.getElementById('menuToggle');
+const links = document.getElementById('navLinks');
+if(toggle){ toggle.addEventListener('click', () => links.classList.toggle('open')); }
+if(links){ links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open'))); }
+
+// header shadow on scroll
+const header = document.getElementById('siteHeader');
+window.addEventListener('scroll', () => {
+  if(header){ header.classList.toggle('scrolled', window.scrollY > 10); }
+});
+
+// scroll reveal
+const revealEls = document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+} else {
+  revealEls.forEach(el => el.classList.add('visible'));
+}
+
+// generic carousel factory
+function initCarousel(rootId, opts={}){
+  const root = document.getElementById(rootId);
+  if(!root) return;
+  const track = root.querySelector('.js-track');
+  const slides = Array.from(track.children);
+  const dotsWrap = root.querySelector('.js-dots');
+  const prevBtn = root.querySelector('.js-prev');
+  const nextBtn = root.querySelector('.js-next');
+  let idx = 0;
+  let timer = null;
+
+  if(dotsWrap){
+    const dotClass = opts.dotClass || 'hc-dot';
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = dotClass + (i===0?' active':'');
+      dot.setAttribute('aria-label', 'Ir para slide ' + (i+1));
+      dot.addEventListener('click', () => go(i));
+      dotsWrap.appendChild(dot);
+    });
+  }
+
+  function update(){
+    track.style.transform = 'translateX(-' + (idx*100) + '%)';
+    if(dotsWrap){
+      Array.from(dotsWrap.children).forEach((d,i) => d.classList.toggle('active', i===idx));
+    }
+  }
+  function go(i){ idx = (i+slides.length)%slides.length; update(); resetTimer(); }
+  function next(){ go(idx+1); }
+  function prev(){ go(idx-1); }
+  function resetTimer(){
+    if(!opts.autoplay) return;
+    clearInterval(timer);
+    timer = setInterval(next, opts.interval || 6000);
+  }
+  if(prevBtn) prevBtn.addEventListener('click', prev);
+  if(nextBtn) nextBtn.addEventListener('click', next);
+  update();
+  resetTimer();
+}
+
+// accordion
+document.querySelectorAll('.acc-item').forEach(item => {
+  const head = item.querySelector('.acc-head');
+  const body = item.querySelector('.acc-body');
+  head.addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.acc-item.open').forEach(o => {
+      if(o!==item){ o.classList.remove('open'); o.querySelector('.acc-body').style.maxHeight = null; }
+    });
+    item.classList.toggle('open', !isOpen);
+    body.style.maxHeight = !isOpen ? body.scrollHeight + 'px' : null;
+  });
+});
+
+// product tab filter
+const tabBtns = document.querySelectorAll('.tab-btn');
+if(tabBtns.length){
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      document.querySelectorAll('[data-cat]').forEach(card => {
+        card.classList.toggle('hide', filter!=='todos' && card.dataset.cat!==filter);
+      });
+    });
+  });
+}
+
+</script>
+</body>
+</html>
