@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Produtos — Sítio Três Manhãs</title>
 <meta name="description" content="Conheça os ovos caipiras, a banana nanica e o novo leite fresco do Sítio Três Manhãs, além das cestas prontas para assinar.">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -253,11 +254,30 @@ footer a:hover{ color:var(--banana); }
 }
 @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } *{ transition:none !important; } }
 </style>
+<link rel="stylesheet" href="assets/modern.css">
 </head>
 <body>
 <header id="siteHeader">
   <nav class="nav wrap">
-    <a href="index.html" class="logo">Sítio <span class="dot">Três</span> Manhãs</a>
+    <a href="index.html" class="logo" aria-label="Sítio Três Manhãs — início"><svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
+  <defs>
+    <linearGradient id="lgSun" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD66B"/><stop offset="1" stop-color="#E0782A"/></linearGradient>
+    <linearGradient id="lgSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF4DC"/><stop offset="1" stop-color="#F9D9A0"/></linearGradient>
+    <clipPath id="lgClip"><circle cx="32" cy="32" r="30"/></clipPath>
+  </defs>
+  <circle cx="32" cy="32" r="31" fill="#33291F"/>
+  <g clip-path="url(#lgClip)">
+    <rect width="64" height="64" fill="url(#lgSky)"/>
+    <g class="rays" stroke="#E0A526" stroke-width="2.6" stroke-linecap="round">
+      <path d="M32 26v-8"/><path d="M22.8 30.8 17.2 25.2"/><path d="M41.2 30.8 46.8 25.2"/><path d="M19.8 35.6 12.3 32.9"/><path d="M44.2 35.6 51.7 32.9"/>
+    </g>
+    <circle cx="32" cy="40" r="11" fill="url(#lgSun)"/>
+    <path d="M-2 44c10-6 20-6 30 0s22 5 38-2v24H-2Z" fill="#E0A526"/>
+    <path d="M-2 50c12-5 22-4 32 1s20 4 36-1v16H-2Z" fill="#3D5A73"/>
+    <path d="M-2 56c14-4 26-3 36 1s18 3 32 0v9H-2Z" fill="#224230"/>
+  </g>
+  <circle cx="32" cy="32" r="30" fill="none" stroke="#33291F" stroke-width="2"/>
+</svg><span class="logo-text"><span>Sítio <span class="dot">Três</span> Manhãs</span><small>DIRETO DO PRODUTOR</small></span></a>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Início</a></li>
       <li><a href="produtos.html" class="active">Produtos</a></li>
@@ -275,8 +295,8 @@ footer a:hover{ color:var(--banana); }
   <div class="wrap">
     <p class="crumb"><a href="index.html">Início</a> / Produtos</p>
     <p class="eyebrow">Catálogo</p>
-    <h1>Ovos, banana e leite — sempre frescos</h1>
-    <p>Preferimos fazer pouco e fazer bem do que ter um catálogo gigante. Conheça os três produtos que trabalhamos e as cestas prontas para assinar.</p>
+    <h1>Ovos, banana, leite e <em>mel</em> — sempre frescos</h1>
+    <p>Preferimos fazer pouco e fazer bem do que ter um catálogo gigante. Conheça os quatro produtos que trabalhamos e as cestas prontas para assinar.</p>
   </div>
 </section>
 
@@ -287,16 +307,19 @@ footer a:hover{ color:var(--banana); }
       <button class="tab-btn" data-filter="ovos">Ovos</button>
       <button class="tab-btn" data-filter="banana">Banana</button>
       <button class="tab-btn" data-filter="leite">Leite</button>
+      <button class="tab-btn" data-filter="mel">🍯 Mel</button>
     </div>
     <div class="products-grid">
       
-      <article class="product-card reveal" data-cat="ovos">
-        <div class="product-art"><svg viewBox="0 0 160 160" width="120" role="img" aria-label="Ovos caipiras">
-    <ellipse cx="80" cy="140" rx="60" ry="10" fill="#3A2E22" opacity="0.08"/>
-    <ellipse cx="60" cy="95" rx="34" ry="42" fill="#FBEFD4" stroke="#D8B98A" stroke-width="2.5"/>
-    <ellipse cx="102" cy="105" rx="30" ry="38" fill="#F3E2BC" stroke="#D8B98A" stroke-width="2.5"/>
-    <ellipse cx="60" cy="88" rx="10" ry="7" fill="#FFFFFF" opacity="0.6"/>
-  </svg></div>
+      <article class="product-card theme-ovos reveal" data-cat="ovos">
+        
+      <div class="photo-frame">
+        <div class="photo-frame-inner photo-frame-real">
+          <img src="https://images.unsplash.com/photo-1509479100390-f83a8349e79c?auto=format&fit=crop&w=900&q=75" alt="Cesta de ovos caipiras frescos" loading="lazy">
+        </div>
+        <span class="photo-caption"></span>
+      </div>
+        <div style="height:16px"></div>
         <span class="badge">OVOS CAIPIRAS</span>
         <h3>Dúzia de ovos caipiras</h3>
         <p class="desc">Galinhas criadas soltas, ao ar livre, com ração natural. Gema mais alaranjada e sabor que qualquer um percebe na primeira mordida.</p>
@@ -305,19 +328,22 @@ footer a:hover{ color:var(--banana); }
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Sem uso de hormônios</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Coletados no mesmo dia da entrega</li>
         </ul>
+        <a href="#como-e-feito" class="how-link" data-goto="ovos">Como é feito ↓</a>
         <div class="product-foot">
           <div class="price">R$ 14,90 <span>/ dúzia</span></div>
-          <a href="contato.html" class="btn btn-outline" style="padding:10px 18px;">Adicionar</a>
+          <a href="contato.html?interesse=ovos" class="btn btn-outline" style="padding:10px 18px;">Pedir</a>
         </div>
       </article>
       
-      <article class="product-card reveal" data-cat="banana">
-        <div class="product-art"><svg viewBox="0 0 160 160" width="120" role="img" aria-label="Banana nanica">
-    <ellipse cx="80" cy="140" rx="60" ry="10" fill="#3A2E22" opacity="0.08"/>
-    <path d="M45 120 C20 90, 30 45, 85 25 C110 16, 130 22, 135 35 C110 32, 92 42, 80 62 C120 40, 140 65, 138 90 C105 68, 68 78, 50 118 Z" fill="#F5C518"/>
-    <path d="M48 118 C28 92, 34 52, 82 32" fill="none" stroke="#C79A0E" stroke-width="3" stroke-linecap="round"/>
-    <path d="M120 30 C126 24, 134 24, 138 30" fill="none" stroke="#8C6E1A" stroke-width="3" stroke-linecap="round"/>
-  </svg></div>
+      <article class="product-card theme-banana reveal" data-cat="banana">
+        
+      <div class="photo-frame">
+        <div class="photo-frame-inner photo-frame-real">
+          <img src="https://images.unsplash.com/photo-1679255728321-88375291b36c?auto=format&fit=crop&w=900&q=75" alt="Cacho de banana nanica" loading="lazy">
+        </div>
+        <span class="photo-caption"></span>
+      </div>
+        <div style="height:16px"></div>
         <span class="badge">BANANA NANICA</span>
         <h3>Banana nanica no ponto</h3>
         <p class="desc">Colhida quase madura, do jeito que a banana de supermercado nunca chega até você. Sabor mais doce e textura mais macia.</p>
@@ -326,21 +352,23 @@ footer a:hover{ color:var(--banana); }
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Colhida no ponto certo de doçura</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Cacho de aprox. 1,2 kg</li>
         </ul>
+        <a href="#como-e-feito" class="how-link" data-goto="banana">Como é feito ↓</a>
         <div class="product-foot">
           <div class="price">R$ 9,90 <span>/ cacho</span></div>
-          <a href="contato.html" class="btn btn-outline" style="padding:10px 18px;">Adicionar</a>
+          <a href="contato.html?interesse=banana" class="btn btn-outline" style="padding:10px 18px;">Pedir</a>
         </div>
       </article>
       
-      <article class="product-card reveal" data-cat="leite">
-        <div class="product-art"><svg viewBox="0 0 160 160" width="120" role="img" aria-label="Garrafa de leite fresco">
-    <ellipse cx="80" cy="145" rx="46" ry="9" fill="#3A2E22" opacity="0.08"/>
-    <path d="M65 30 h30 v18 l14 20 v65 a8 8 0 0 1-8 8 H59 a8 8 0 0 1-8-8 V68 l14-20 Z" fill="#FFFDF6" stroke="#D8B98A" stroke-width="2.5"/>
-    <rect x="60" y="24" width="40" height="12" rx="3" fill="#5B7C99"/>
-    <rect x="51" y="95" width="58" height="30" fill="#E29227" opacity="0.9"/>
-    <text x="80" y="115" font-family="IBM Plex Mono, monospace" font-size="11" fill="#FFFDF6" text-anchor="middle" font-weight="600">FRESCO</text>
-  </svg></div>
-        <span class="badge">NOVIDADE · LEITE</span>
+      <article class="product-card theme-leite reveal" data-cat="leite">
+        
+      <div class="photo-frame">
+        <div class="photo-frame-inner photo-frame-real">
+          <img src="https://images.unsplash.com/photo-1601436423474-51738541c1b1?auto=format&fit=crop&w=900&q=75" alt="Garrafa de vidro com leite fresco" loading="lazy">
+        </div>
+        <span class="photo-caption"></span>
+      </div>
+        <div style="height:16px"></div>
+        <span class="badge">LEITE FRESCO</span>
         <h3>Leite fresco integral</h3>
         <p class="desc">Pasteurizado no mesmo dia da ordenha, sem conservantes nem aditivos. Entregue em garrafa de vidro retornável.</p>
         <ul>
@@ -348,11 +376,96 @@ footer a:hover{ color:var(--banana); }
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Pasteurização no mesmo dia</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Garrafa de vidro retornável</li>
         </ul>
+        <a href="#como-e-feito" class="how-link" data-goto="leite">Como é feito ↓</a>
         <div class="product-foot">
           <div class="price">R$ 8,90 <span>/ litro</span></div>
-          <a href="contato.html" class="btn btn-outline" style="padding:10px 18px;">Adicionar</a>
+          <a href="contato.html?interesse=leite" class="btn btn-outline" style="padding:10px 18px;">Pedir</a>
         </div>
       </article>
+      <article class="product-card theme-mel is-honey reveal" data-cat="mel">
+        
+      <div class="photo-frame">
+        <div class="photo-frame-inner photo-frame-real">
+          <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=900&q=75" alt="Pote de vidro com mel silvestre e pedaço de favo" loading="lazy">
+        </div>
+        <span class="photo-caption"></span>
+      </div>
+        <div style="height:16px"></div>
+        <span class="badge">NOVIDADE · MEL</span>
+        <h3>Mel silvestre puro</h3>
+        <p class="desc">Das 12 colmeias do sítio, extraído a frio e envasado em vidro. Cor âmbar, aroma floral e nada além de mel.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Extração a frio, sem aquecimento</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Sem açúcar, xarope ou conservante</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Pote de vidro de 500 g</li>
+        </ul>
+        <a href="#como-e-feito" class="how-link" data-goto="mel">Como é feito ↓</a>
+        <div class="product-foot">
+          <div class="price">R$ 32,90 <span>/ 500 g</span></div>
+          <a href="contato.html?interesse=mel" class="btn btn-outline" style="padding:10px 18px;">Pedir</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="como-e-feito" style="scroll-margin-top:90px;">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Transparência total</p>
+      <h2>Como cada produto <em>é feito</em></h2>
+      <p>Escolha um produto e veja o caminho dele, do sítio até a sua mesa. Sem segredo e sem atalho.</p>
+    </div>
+    <div class="proc-tabs reveal" role="tablist"><button class="proc-tab theme-ovos active" data-proc="ovos"><span class="e">🥚</span><span>Ovos<small>DO NINHO À CAIXA</small></span></button><button class="proc-tab theme-banana" data-proc="banana"><span class="e">🍌</span><span>Banana<small>DO PÉ AO CACHO</small></span></button><button class="proc-tab theme-leite" data-proc="leite"><span class="e">🥛</span><span>Leite<small>DA ORDENHA À GARRAFA</small></span></button><button class="proc-tab theme-mel" data-proc="mel"><span class="e">🍯</span><span>Mel<small>DO FAVO AO POTE</small></span></button></div>
+    <div class="reveal">
+    <div class="proc-panel theme-ovos active" data-proc="ovos" id="proc-ovos">
+      <div class="proc-steps"><div class="proc-step"><div class="hx-num">1</div><span class="when">AO AMANHECER</span><h3>Galinheiro aberto</h3><p>As galinhas saem para o piquete. À noite voltam para o galinheiro, onde ficam os ninhos forrados de palha.</p></div><div class="proc-step"><div class="hx-num">2</div><span class="when">7H E 16H</span><h3>Coleta manual</h3><p>Recolhemos os ovos dos ninhos duas vezes por dia, direto para bandejas limpas.</p></div><div class="proc-step"><div class="hx-num">3</div><span class="when">NA SEQUÊNCIA</span><h3>Limpeza a seco e ovoscopia</h3><p>Tiramos a sujeira com escova, sem lavar, e cada ovo passa na frente de uma luz para detectar trincas.</p></div><div class="proc-step"><div class="hx-num">4</div><span class="when">ANTES DA ENTREGA</span><h3>Classificação e caixa</h3><p>Separamos por tamanho, embalamos de 12 em 12 e carimbamos a data de coleta.</p></div></div>
+      <div class="proc-banner">
+        <img src="https://images.unsplash.com/photo-1556316918-880f9e893822?auto=format&fit=crop&w=1000&q=75" alt="Galinhas caipiras ciscando perto da cerca" loading="lazy">
+        <div>
+          <p class="eyebrow">Bem-estar das aves</p>
+          <h3>Galinha tranquila bota melhor</h3>
+          <p>Espaço para ciscar, poleiro, banho de terra e rodízio de pasto fazem parte da rotina. Galinha estressada bota menos — e pior.</p>
+          <p class="tip">💡 Guarde na geladeira e só lave na hora de usar: a casca tem uma película natural de proteção.</p>
+        </div>
+      </div>
+    </div>
+    <div class="proc-panel theme-banana" data-proc="banana" id="proc-banana">
+      <div class="proc-steps"><div class="proc-step"><div class="hx-num">1</div><span class="when">O ANO TODO</span><h3>Cuidado do bananal</h3><p>Adubação orgânica, retirada de folhas secas e desbaste: deixamos poucas mudas por touceira para o cacho crescer forte.</p></div><div class="proc-step"><div class="hx-num">2</div><span class="when">CACHO FORMADO</span><h3>Ensacamento</h3><p>Retiramos o “coração” da ponta do cacho e cobrimos com um saco protetor contra insetos e sol forte.</p></div><div class="proc-step"><div class="hx-num">3</div><span class="when">NO PONTO</span><h3>Colheita</h3><p>Cortamos o cacho quando os frutos estão cheios e com as quinas arredondadas, ainda verde-claros.</p></div><div class="proc-step"><div class="hx-num">4</div><span class="when">ANTES DA ENTREGA</span><h3>Despenca e maturação</h3><p>Separamos as pencas, lavamos o látex e deixamos amadurecer naturalmente, em local fresco e arejado.</p></div></div>
+      <div class="proc-banner">
+        <img src="https://images.unsplash.com/photo-1653481006616-aab561a77a3b?auto=format&fit=crop&w=1000&q=75" alt="Bananal visto por entre as folhas" loading="lazy">
+        <div>
+          <p class="eyebrow">Nada se perde</p>
+          <h3>Cada bananeira dá um cacho só</h3>
+          <p>Depois da colheita, o tronco da bananeira é cortado e vira adubo para a muda que já está crescendo ao lado. É assim que o bananal se renova.</p>
+          <p class="tip">💡 Não guarde banana verde na geladeira: a casca escurece e ela para de amadurecer.</p>
+        </div>
+      </div>
+    </div>
+    <div class="proc-panel theme-leite" data-proc="leite" id="proc-leite">
+      <div class="proc-steps"><div class="proc-step"><div class="hx-num">1</div><span class="when">DIA E NOITE</span><h3>Vacas a pasto</h3><p>Pasto em rodízio, água limpa e sombra. As vacas só vêm para o curral na hora da ordenha.</p></div><div class="proc-step"><div class="hx-num">2</div><span class="when">5H DA MANHÃ</span><h3>Ordenha higiênica</h3><p>Lavamos e secamos os tetos, descartamos os primeiros jatos e ordenhamos com equipamento higienizado.</p></div><div class="proc-step"><div class="hx-num">3</div><span class="when">NA HORA</span><h3>Resfriamento</h3><p>O leite vai direto para o tanque de resfriamento e fica a 4 °C até a pasteurização.</p></div><div class="proc-step"><div class="hx-num">4</div><span class="when">MESMO DIA</span><h3>Pasteurização e envase</h3><p>Pasteurização lenta (65 °C por 30 min), resfriamento rápido e envase em garrafas de vidro higienizadas.</p></div></div>
+      <div class="proc-banner">
+        <img src="https://images.unsplash.com/photo-1567513068697-fca8c2af4528?auto=format&fit=crop&w=1000&q=75" alt="Vacas caminhando pelo pasto" loading="lazy">
+        <div>
+          <p class="eyebrow">Manejo sem pressa</p>
+          <h3>Vaca calma dá leite melhor</h3>
+          <p>Rotina fixa, sem gritos e sem correria no curral: vaca tranquila solta o leite com mais facilidade e fica mais saudável.</p>
+          <p class="tip">⚠️ Nunca consuma leite cru. O nosso é sempre pasteurizado e deve ficar na geladeira.</p>
+        </div>
+      </div>
+    </div>
+    <div class="proc-panel theme-mel" data-proc="mel" id="proc-mel">
+      <div class="proc-steps"><div class="proc-step"><div class="hx-num">1</div><span class="when">PRIMAVERA E VERÃO</span><h3>Florada</h3><p>As abelhas visitam as flores das matas, pomares e pasto em volta do sítio e levam o néctar para a colmeia.</p></div><div class="proc-step"><div class="hx-num">2</div><span class="when">FAVO MADURO</span><h3>Colheita dos quadros</h3><p>Só retiramos quadros com os alvéolos operculados (fechados com cera) — sinal de que o mel está pronto.</p></div><div class="proc-step"><div class="hx-num">3</div><span class="when">NA CASA DO MEL</span><h3>Extração a frio</h3><p>Os favos são desoperculados e centrifugados, sem aquecimento, para preservar aroma e propriedades.</p></div><div class="proc-step"><div class="hx-num">4</div><span class="when">ANTES DA ENTREGA</span><h3>Decantação e envase</h3><p>O mel descansa para as impurezas subirem, é filtrado e envasado em vidro com lote e data.</p></div></div>
+      <div class="proc-banner">
+        <img src="https://images.unsplash.com/photo-1641822888635-97d60ecd9acd?auto=format&fit=crop&w=1000&q=75" alt="Apicultor segurando um quadro da colmeia cheio de abelhas" loading="lazy">
+        <div>
+          <p class="eyebrow">Manejo responsável</p>
+          <h3>Abelha tranquila, mel melhor</h3>
+          <p>Deixamos sempre uma reserva de mel na colmeia para as abelhas atravessarem o inverno. A gente colhe o excedente, nunca tudo.</p>
+          <p class="tip">⚠️ Mel não deve ser oferecido a crianças menores de 1 ano.</p>
+        </div>
+      </div>
+    </div>
     </div>
   </div>
 </section>
@@ -362,7 +475,7 @@ footer a:hover{ color:var(--banana); }
     <div class="section-head reveal">
       <p class="eyebrow">Cestas</p>
       <h2>Escolha o tamanho da sua cesta</h2>
-      <p>Compre avulso ou assine e receba toda semana sem precisar pedir de novo. Todas as cestas já podem incluir o leite.</p>
+      <p>Compre avulso ou assine e receba toda semana sem precisar pedir de novo. Todas as cestas já podem incluir o leite — e agora também o mel.</p>
     </div>
     <div class="baskets-grid">
       <div class="basket reveal">
@@ -405,6 +518,11 @@ footer a:hover{ color:var(--banana); }
         <a href="contato.html" class="btn btn-outline">Escolher Família</a>
       </div>
     </div>
+    <div class="addon-banner reveal">
+      <span class="jar">🍯</span>
+      <p><strong>Adicione mel a qualquer cesta:</strong> pote de 500 g por <strong>R$ 29,90</strong> (em vez de R$ 32,90 avulso).</p>
+      <a href="contato.html?interesse=mel" class="btn btn-primary btn-shimmer">Quero incluir</a>
+    </div>
   </div>
 </section>
 
@@ -414,7 +532,7 @@ footer a:hover{ color:var(--banana); }
       <div>
         <p class="eyebrow" style="color:#BFE0BF">Ficou com dúvida?</p>
         <h2>Fale com a gente antes de escolher sua cesta</h2>
-        <p>A gente te ajuda a montar a cesta ideal pra sua casa, com ou sem leite.</p>
+        <p>A gente te ajuda a montar a cesta ideal pra sua casa, com ou sem leite, com ou sem mel.</p>
       </div>
       <div class="newsletter">
         <a href="contato.html" class="btn btn-light" style="width:100%; justify-content:center;">Ir para contato</a>
@@ -427,8 +545,26 @@ footer a:hover{ color:var(--banana); }
   <div class="wrap">
     <div class="footer-grid">
       <div>
-        <div class="logo">Sítio Três Manhãs</div>
-        <p>Ovos caipiras, banana nanica e leite fresco direto do produtor pra sua casa. Sem atravessador, sem prateleira.</p>
+        <div class="logo"><svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
+  <defs>
+    <linearGradient id="lgSun" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD66B"/><stop offset="1" stop-color="#E0782A"/></linearGradient>
+    <linearGradient id="lgSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF4DC"/><stop offset="1" stop-color="#F9D9A0"/></linearGradient>
+    <clipPath id="lgClip"><circle cx="32" cy="32" r="30"/></clipPath>
+  </defs>
+  <circle cx="32" cy="32" r="31" fill="#33291F"/>
+  <g clip-path="url(#lgClip)">
+    <rect width="64" height="64" fill="url(#lgSky)"/>
+    <g class="rays" stroke="#E0A526" stroke-width="2.6" stroke-linecap="round">
+      <path d="M32 26v-8"/><path d="M22.8 30.8 17.2 25.2"/><path d="M41.2 30.8 46.8 25.2"/><path d="M19.8 35.6 12.3 32.9"/><path d="M44.2 35.6 51.7 32.9"/>
+    </g>
+    <circle cx="32" cy="40" r="11" fill="url(#lgSun)"/>
+    <path d="M-2 44c10-6 20-6 30 0s22 5 38-2v24H-2Z" fill="#E0A526"/>
+    <path d="M-2 50c12-5 22-4 32 1s20 4 36-1v16H-2Z" fill="#3D5A73"/>
+    <path d="M-2 56c14-4 26-3 36 1s18 3 32 0v9H-2Z" fill="#224230"/>
+  </g>
+  <circle cx="32" cy="32" r="30" fill="none" stroke="#33291F" stroke-width="2"/>
+</svg><span class="logo-text"><span>Sítio <span class="dot">Três</span> Manhãs</span><small>DIRETO DO PRODUTOR</small></span></div>
+        <p>Ovos caipiras, banana nanica, leite fresco e mel silvestre direto do produtor pra sua casa. Sem atravessador, sem prateleira.</p>
       </div>
       <div>
         <h4>Navegação</h4>
@@ -552,5 +688,6 @@ if(tabBtns.length){
 }
 
 </script>
+<script src="assets/modern.js"></script>
 </body>
 </html>

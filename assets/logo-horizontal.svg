@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 72">
+  <g transform="translate(4 4)">
+  <defs>
+    <linearGradient id="lgSun" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD66B"/><stop offset="1" stop-color="#E0782A"/></linearGradient>
+    <linearGradient id="lgSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF4DC"/><stop offset="1" stop-color="#F9D9A0"/></linearGradient>
+    <clipPath id="lgClip"><circle cx="32" cy="32" r="30"/></clipPath>
+  </defs>
+  <circle cx="32" cy="32" r="31" fill="#33291F"/>
+  <g clip-path="url(#lgClip)">
+    <rect width="64" height="64" fill="url(#lgSky)"/>
+    <g class="rays" stroke="#E0A526" stroke-width="2.6" stroke-linecap="round">
+      <path d="M32 26v-8"/><path d="M22.8 30.8 17.2 25.2"/><path d="M41.2 30.8 46.8 25.2"/><path d="M19.8 35.6 12.3 32.9"/><path d="M44.2 35.6 51.7 32.9"/>
+    </g>
+    <circle cx="32" cy="40" r="11" fill="url(#lgSun)"/>
+    <path d="M-2 44c10-6 20-6 30 0s22 5 38-2v24H-2Z" fill="#E0A526"/>
+    <path d="M-2 50c12-5 22-4 32 1s20 4 36-1v16H-2Z" fill="#3D5A73"/>
+    <path d="M-2 56c14-4 26-3 36 1s18 3 32 0v9H-2Z" fill="#224230"/>
+  </g>
+  <circle cx="32" cy="32" r="30" fill="none" stroke="#33291F" stroke-width="2"/>
+</g>
+  <text x="82" y="40" font-family="Fraunces, Georgia, serif" font-size="28" font-weight="700" fill="#33291F">Sítio <tspan fill="#C89B3C">Três</tspan> Manhãs</text>
+  <text x="83" y="60" font-family="IBM Plex Mono, monospace" font-size="10.5" letter-spacing="3" fill="#6B5D4C">DIRETO DO PRODUTOR · MARINGÁ</text>
+</svg>
