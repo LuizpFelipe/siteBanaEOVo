@@ -253,6 +253,7 @@ footer a:hover{ color:var(--banana); }
 }
 @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } *{ transition:none !important; } }
 </style>
+<link rel="stylesheet" href="assets/modern.css">
 </head>
 <body>
 <header id="siteHeader">
@@ -300,10 +301,18 @@ footer a:hover{ color:var(--banana); }
         <div class="form-row">
           <label for="cesta">Tenho interesse em</label>
           <select id="cesta">
-            <option>Cesta Solo</option>
-            <option>Cesta Família</option>
-            <option>Cesta Assinatura</option>
-            <option>Ainda não sei</option>
+            <optgroup label="Cestas">
+              <option value="solo">Cesta Solo</option>
+              <option value="familia">Cesta Família</option>
+              <option value="assinatura">Cesta Assinatura</option>
+            </optgroup>
+            <optgroup label="Produtos avulsos">
+              <option value="ovos">Ovos caipiras</option>
+              <option value="banana">Banana nanica</option>
+              <option value="leite">Leite fresco</option>
+              <option value="mel">🍯 Mel silvestre (pote 500 g)</option>
+            </optgroup>
+            <option value="nao-sei">Ainda não sei</option>
           </select>
         </div>
         <div class="form-row">
@@ -362,6 +371,20 @@ footer a:hover{ color:var(--banana); }
           <div class="acc-body-inner">Hoje as entregas acontecem às sextas-feiras. Estamos estudando adicionar mais dias conforme a gente crescer.</div>
         </div>
       </div>
+
+      <div class="acc-item">
+        <div class="acc-head"><span>Meu mel cristalizou. Estragou?</span><span class="plus">+</span></div>
+        <div class="acc-body">
+          <div class="acc-body-inner">Não! A cristalização é natural do mel puro e acontece mais rápido no frio. Para voltar à textura líquida, deixe o pote em banho-maria morno (até 40 °C) — sem micro-ondas e sem ferver.</div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <div class="acc-head"><span>Posso dar mel para criança pequena?</span><span class="plus">+</span></div>
+        <div class="acc-body">
+          <div class="acc-body-inner">Mel não deve ser oferecido a crianças menores de 1 ano. A partir dessa idade, pode fazer parte da alimentação normalmente.</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -371,7 +394,7 @@ footer a:hover{ color:var(--banana); }
     <div class="footer-grid">
       <div>
         <div class="logo">Sítio Três Manhãs</div>
-        <p>Ovos caipiras, banana nanica e leite fresco direto do produtor pra sua casa. Sem atravessador, sem prateleira.</p>
+        <p>Ovos caipiras, banana nanica, leite fresco e mel silvestre direto do produtor pra sua casa. Sem atravessador, sem prateleira.</p>
       </div>
       <div>
         <h4>Navegação</h4>
@@ -495,5 +518,6 @@ if(tabBtns.length){
 }
 
 </script>
+<script src="assets/modern.js"></script>
 </body>
 </html>

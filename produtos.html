@@ -253,6 +253,7 @@ footer a:hover{ color:var(--banana); }
 }
 @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } *{ transition:none !important; } }
 </style>
+<link rel="stylesheet" href="assets/modern.css">
 </head>
 <body>
 <header id="siteHeader">
@@ -275,8 +276,8 @@ footer a:hover{ color:var(--banana); }
   <div class="wrap">
     <p class="crumb"><a href="index.html">Início</a> / Produtos</p>
     <p class="eyebrow">Catálogo</p>
-    <h1>Ovos, banana e leite — sempre frescos</h1>
-    <p>Preferimos fazer pouco e fazer bem do que ter um catálogo gigante. Conheça os três produtos que trabalhamos e as cestas prontas para assinar.</p>
+    <h1>Ovos, banana, leite e <em>mel</em> — sempre frescos</h1>
+    <p>Preferimos fazer pouco e fazer bem do que ter um catálogo gigante. Conheça os quatro produtos que trabalhamos e as cestas prontas para assinar.</p>
   </div>
 </section>
 
@@ -287,16 +288,19 @@ footer a:hover{ color:var(--banana); }
       <button class="tab-btn" data-filter="ovos">Ovos</button>
       <button class="tab-btn" data-filter="banana">Banana</button>
       <button class="tab-btn" data-filter="leite">Leite</button>
+      <button class="tab-btn" data-filter="mel">🍯 Mel</button>
     </div>
     <div class="products-grid">
       
       <article class="product-card reveal" data-cat="ovos">
-        <div class="product-art"><svg viewBox="0 0 160 160" width="120" role="img" aria-label="Ovos caipiras">
-    <ellipse cx="80" cy="140" rx="60" ry="10" fill="#3A2E22" opacity="0.08"/>
-    <ellipse cx="60" cy="95" rx="34" ry="42" fill="#FBEFD4" stroke="#D8B98A" stroke-width="2.5"/>
-    <ellipse cx="102" cy="105" rx="30" ry="38" fill="#F3E2BC" stroke="#D8B98A" stroke-width="2.5"/>
-    <ellipse cx="60" cy="88" rx="10" ry="7" fill="#FFFFFF" opacity="0.6"/>
-  </svg></div>
+        
+      <div class="photo-frame">
+        <div class="photo-frame-inner photo-frame-real">
+          <img src="https://images.unsplash.com/photo-1509479100390-f83a8349e79c?auto=format&fit=crop&w=900&q=75" alt="Cesta de ovos caipiras frescos" loading="lazy">
+        </div>
+        <span class="photo-caption"></span>
+      </div>
+        <div style="height:16px"></div>
         <span class="badge">OVOS CAIPIRAS</span>
         <h3>Dúzia de ovos caipiras</h3>
         <p class="desc">Galinhas criadas soltas, ao ar livre, com ração natural. Gema mais alaranjada e sabor que qualquer um percebe na primeira mordida.</p>
@@ -307,17 +311,19 @@ footer a:hover{ color:var(--banana); }
         </ul>
         <div class="product-foot">
           <div class="price">R$ 14,90 <span>/ dúzia</span></div>
-          <a href="contato.html" class="btn btn-outline" style="padding:10px 18px;">Adicionar</a>
+          <a href="contato.html?interesse=ovos" class="btn btn-outline" style="padding:10px 18px;">Pedir</a>
         </div>
       </article>
       
       <article class="product-card reveal" data-cat="banana">
-        <div class="product-art"><svg viewBox="0 0 160 160" width="120" role="img" aria-label="Banana nanica">
-    <ellipse cx="80" cy="140" rx="60" ry="10" fill="#3A2E22" opacity="0.08"/>
-    <path d="M45 120 C20 90, 30 45, 85 25 C110 16, 130 22, 135 35 C110 32, 92 42, 80 62 C120 40, 140 65, 138 90 C105 68, 68 78, 50 118 Z" fill="#F5C518"/>
-    <path d="M48 118 C28 92, 34 52, 82 32" fill="none" stroke="#C79A0E" stroke-width="3" stroke-linecap="round"/>
-    <path d="M120 30 C126 24, 134 24, 138 30" fill="none" stroke="#8C6E1A" stroke-width="3" stroke-linecap="round"/>
-  </svg></div>
+        
+      <div class="photo-frame">
+        <div class="photo-frame-inner photo-frame-real">
+          <img src="https://images.unsplash.com/photo-1679255728321-88375291b36c?auto=format&fit=crop&w=900&q=75" alt="Cacho de banana nanica" loading="lazy">
+        </div>
+        <span class="photo-caption"></span>
+      </div>
+        <div style="height:16px"></div>
         <span class="badge">BANANA NANICA</span>
         <h3>Banana nanica no ponto</h3>
         <p class="desc">Colhida quase madura, do jeito que a banana de supermercado nunca chega até você. Sabor mais doce e textura mais macia.</p>
@@ -328,19 +334,20 @@ footer a:hover{ color:var(--banana); }
         </ul>
         <div class="product-foot">
           <div class="price">R$ 9,90 <span>/ cacho</span></div>
-          <a href="contato.html" class="btn btn-outline" style="padding:10px 18px;">Adicionar</a>
+          <a href="contato.html?interesse=banana" class="btn btn-outline" style="padding:10px 18px;">Pedir</a>
         </div>
       </article>
       
       <article class="product-card reveal" data-cat="leite">
-        <div class="product-art"><svg viewBox="0 0 160 160" width="120" role="img" aria-label="Garrafa de leite fresco">
-    <ellipse cx="80" cy="145" rx="46" ry="9" fill="#3A2E22" opacity="0.08"/>
-    <path d="M65 30 h30 v18 l14 20 v65 a8 8 0 0 1-8 8 H59 a8 8 0 0 1-8-8 V68 l14-20 Z" fill="#FFFDF6" stroke="#D8B98A" stroke-width="2.5"/>
-    <rect x="60" y="24" width="40" height="12" rx="3" fill="#5B7C99"/>
-    <rect x="51" y="95" width="58" height="30" fill="#E29227" opacity="0.9"/>
-    <text x="80" y="115" font-family="IBM Plex Mono, monospace" font-size="11" fill="#FFFDF6" text-anchor="middle" font-weight="600">FRESCO</text>
-  </svg></div>
-        <span class="badge">NOVIDADE · LEITE</span>
+        
+      <div class="photo-frame">
+        <div class="photo-frame-inner photo-frame-real">
+          <img src="https://images.unsplash.com/photo-1601436423474-51738541c1b1?auto=format&fit=crop&w=900&q=75" alt="Garrafa de vidro com leite fresco" loading="lazy">
+        </div>
+        <span class="photo-caption"></span>
+      </div>
+        <div style="height:16px"></div>
+        <span class="badge">LEITE FRESCO</span>
         <h3>Leite fresco integral</h3>
         <p class="desc">Pasteurizado no mesmo dia da ordenha, sem conservantes nem aditivos. Entregue em garrafa de vidro retornável.</p>
         <ul>
@@ -350,9 +357,56 @@ footer a:hover{ color:var(--banana); }
         </ul>
         <div class="product-foot">
           <div class="price">R$ 8,90 <span>/ litro</span></div>
-          <a href="contato.html" class="btn btn-outline" style="padding:10px 18px;">Adicionar</a>
+          <a href="contato.html?interesse=leite" class="btn btn-outline" style="padding:10px 18px;">Pedir</a>
         </div>
       </article>
+      <article class="product-card is-honey reveal" data-cat="mel">
+        
+      <div class="photo-frame">
+        <div class="photo-frame-inner photo-frame-real">
+          <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=900&q=75" alt="Pote de vidro com mel silvestre e pedaço de favo" loading="lazy">
+        </div>
+        <span class="photo-caption"></span>
+      </div>
+        <div style="height:16px"></div>
+        <span class="badge">NOVIDADE · MEL</span>
+        <h3>Mel silvestre puro</h3>
+        <p class="desc">Das 12 colmeias do sítio, extraído a frio e envasado em vidro. Cor âmbar, aroma floral e nada além de mel.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Extração a frio, sem aquecimento</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Sem açúcar, xarope ou conservante</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Pote de vidro de 500 g</li>
+        </ul>
+        <div class="product-foot">
+          <div class="price">R$ 32,90 <span>/ 500 g</span></div>
+          <a href="contato.html?interesse=mel" class="btn btn-outline" style="padding:10px 18px;">Pedir</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="mel">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Do favo ao pote</p>
+      <h2>Como nasce o nosso <em>mel</em></h2>
+      <p>Quatro etapas, nenhum atalho. Mel bom é questão de esperar a abelha terminar o trabalho dela.</p>
+    </div>
+    <div class="favo-steps">
+      <div class="favo-step reveal"><div class="hx-num">1</div><h3>Florada</h3><p>As abelhas visitam as flores das matas, pomares e pasto em volta do sítio e levam o néctar para a colmeia.</p></div>
+      <div class="favo-step reveal"><div class="hx-num">2</div><h3>Colheita do favo maduro</h3><p>Só retiramos quadros com os alvéolos operculados (fechados com cera) — sinal de que o mel está pronto.</p></div>
+      <div class="favo-step reveal"><div class="hx-num">3</div><h3>Extração a frio</h3><p>Os favos são desoperculados e centrifugados, sem aquecimento, para preservar aroma e propriedades.</p></div>
+      <div class="favo-step reveal"><div class="hx-num">4</div><h3>Decantação e envase</h3><p>O mel descansa para as impurezas subirem, é filtrado e envasado em vidro com lote e data.</p></div>
+    </div>
+    <div class="favo-banner reveal">
+      <img src="https://images.unsplash.com/photo-1641822888635-97d60ecd9acd?auto=format&fit=crop&w=1000&q=75" alt="Apicultor segurando um quadro da colmeia cheio de abelhas" loading="lazy">
+      <div>
+        <p class="eyebrow" style="color:var(--honey-light);">Manejo responsável</p>
+        <h3>Abelha tranquila, mel melhor</h3>
+        <p>Deixamos sempre uma reserva de mel na colmeia para as abelhas atravessarem o inverno. A gente colhe o excedente, nunca tudo.</p>
+        <p style="font-size:0.85rem;">⚠️ Mel não deve ser oferecido a crianças menores de 1 ano.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -362,7 +416,7 @@ footer a:hover{ color:var(--banana); }
     <div class="section-head reveal">
       <p class="eyebrow">Cestas</p>
       <h2>Escolha o tamanho da sua cesta</h2>
-      <p>Compre avulso ou assine e receba toda semana sem precisar pedir de novo. Todas as cestas já podem incluir o leite.</p>
+      <p>Compre avulso ou assine e receba toda semana sem precisar pedir de novo. Todas as cestas já podem incluir o leite — e agora também o mel.</p>
     </div>
     <div class="baskets-grid">
       <div class="basket reveal">
@@ -405,6 +459,11 @@ footer a:hover{ color:var(--banana); }
         <a href="contato.html" class="btn btn-outline">Escolher Família</a>
       </div>
     </div>
+    <div class="addon-banner reveal">
+      <span class="jar">🍯</span>
+      <p><strong>Adicione mel a qualquer cesta:</strong> pote de 500 g por <strong>R$ 29,90</strong> (em vez de R$ 32,90 avulso).</p>
+      <a href="contato.html?interesse=mel" class="btn btn-primary btn-shimmer">Quero incluir</a>
+    </div>
   </div>
 </section>
 
@@ -414,7 +473,7 @@ footer a:hover{ color:var(--banana); }
       <div>
         <p class="eyebrow" style="color:#BFE0BF">Ficou com dúvida?</p>
         <h2>Fale com a gente antes de escolher sua cesta</h2>
-        <p>A gente te ajuda a montar a cesta ideal pra sua casa, com ou sem leite.</p>
+        <p>A gente te ajuda a montar a cesta ideal pra sua casa, com ou sem leite, com ou sem mel.</p>
       </div>
       <div class="newsletter">
         <a href="contato.html" class="btn btn-light" style="width:100%; justify-content:center;">Ir para contato</a>
@@ -428,7 +487,7 @@ footer a:hover{ color:var(--banana); }
     <div class="footer-grid">
       <div>
         <div class="logo">Sítio Três Manhãs</div>
-        <p>Ovos caipiras, banana nanica e leite fresco direto do produtor pra sua casa. Sem atravessador, sem prateleira.</p>
+        <p>Ovos caipiras, banana nanica, leite fresco e mel silvestre direto do produtor pra sua casa. Sem atravessador, sem prateleira.</p>
       </div>
       <div>
         <h4>Navegação</h4>
@@ -552,5 +611,6 @@ if(tabBtns.length){
 }
 
 </script>
+<script src="assets/modern.js"></script>
 </body>
 </html>

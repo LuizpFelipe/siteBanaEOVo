@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sítio Três Manhãs — Ovos, banana e leite direto do sítio</title>
-<meta name="description" content="Ovos caipiras, banana nanica e leite fresco direto do produtor pra sua casa, com entrega em Maringá e região.">
+<title>Sítio Três Manhãs — Ovos, banana, leite e mel direto do sítio</title>
+<meta name="description" content="Ovos caipiras, banana nanica, leite fresco e mel silvestre puro direto do produtor pra sua casa, com entrega em Maringá e região.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -396,6 +396,7 @@ footer a:hover{ color:var(--banana); }
   .chat-fab span.chat-label{ display:none; }
 }
 </style>
+<link rel="stylesheet" href="assets/modern.css">
 </head>
 <body>
 <header id="siteHeader">
@@ -465,6 +466,16 @@ footer a:hover{ color:var(--banana); }
     <text x="80" y="115" font-family="IBM Plex Mono, monospace" font-size="11" fill="#FFFDF6" text-anchor="middle" font-weight="600">FRESCO</text>
   </svg></div>
         </div>
+        <div class="hc-slide is-honey">
+          <div>
+            <span class="delivery-badge" style="background:var(--honey); color:var(--honey-deep);">🍯 Lançamento de primavera</span>
+            <p class="eyebrow">Das nossas colmeias</p>
+            <h2>Mel silvestre, <em>puro</em> do favo pro seu pote</h2>
+            <p>Extraído a frio, sem aquecimento e sem nada adicionado. Só o que as abelhas do sítio fizeram.</p>
+            <a href="#mel" class="btn btn-primary btn-shimmer">Conhecer o mel</a>
+          </div>
+          <div class="hc-art"><div class="hc-photo"><img src="https://images.unsplash.com/photo-1613548058193-1cd24c1bebcf?auto=format&fit=crop&w=700&q=75" alt="Mel dourado escorrendo de uma colher de madeira para o pote"><span class="price-bubble"><small>POTE 500 g</small>R$ 32,90</span></div></div>
+        </div>
       </div>
       <button class="hc-arrow prev js-prev" aria-label="Slide anterior">&#8592;</button>
       <button class="hc-arrow next js-next" aria-label="Próximo slide">&#8594;</button>
@@ -477,6 +488,8 @@ footer a:hover{ color:var(--banana); }
     </div>
   </div>
 </section>
+
+<div class="ticker" aria-hidden="true"><div class="ticker-track"><span>Ovos caipiras</span><span>Banana nanica</span><span>Leite fresco</span><span>Mel silvestre puro</span><span>Direto do produtor</span><span>Entrega em Maringá e região</span><span>Ovos caipiras</span><span>Banana nanica</span><span>Leite fresco</span><span>Mel silvestre puro</span><span>Direto do produtor</span><span>Entrega em Maringá e região</span></div></div>
 
 <div class="trust-strip">
   <div class="wrap">
@@ -494,7 +507,7 @@ footer a:hover{ color:var(--banana); }
       <h2>Enquanto o ovo de prateleira já viajou semanas até chegar aí, o nosso ainda está morno do ninho.</h2>
     </div>
     <div>
-      <p><span class="stat">48h</span><br>é o tempo médio entre a colheita no sítio e a entrega na sua porta.</p>
+      <p><span class="stat" data-count="48" data-suffix="h">48h</span><br>é o tempo médio entre a colheita no sítio e a entrega na sua porta.</p>
     </div>
   </div>
 </section>
@@ -531,8 +544,8 @@ footer a:hover{ color:var(--banana); }
   <div class="wrap">
     <div class="section-head reveal">
       <p class="eyebrow">Nossos produtos</p>
-      <h2>Três coisas. Feitas muito bem.</h2>
-      <p>Ovos, banana e, agora, leite fresco — sempre com a mesma promessa: direto do produtor, sem intermediário.</p>
+      <h2>Quatro coisas. <em>Feitas muito bem.</em></h2>
+      <p>Ovos, banana, leite fresco e, agora, mel silvestre das nossas colmeias — sempre com a mesma promessa: direto do produtor, sem intermediário.</p>
     </div>
     <div class="products-grid">
       <article class="product-card reveal" data-id="ovos" data-name="Dúzia de ovos caipiras" data-price="14.90">
@@ -575,7 +588,7 @@ footer a:hover{ color:var(--banana); }
         </div>
         <span class="photo-caption">Leite fresco</span>
       </div>
-        <span class="badge" style="margin-top:16px;">NOVIDADE · LEITE</span>
+        <span class="badge" style="margin-top:16px;">LEITE FRESCO</span>
         <h3>Leite fresco integral</h3>
         <p class="desc">Pasteurizado no mesmo dia, sem conservantes, em garrafa de vidro retornável.</p>
         <div class="product-foot">
@@ -583,7 +596,87 @@ footer a:hover{ color:var(--banana); }
           <button class="btn btn-outline js-add-cart" style="padding:10px 18px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 2-1.58l1.65-7.39H5.12"/></svg> Adicionar</button>
         </div>
       </article>
+      <article class="product-card is-honey reveal" data-id="mel" data-name="Mel silvestre puro 500 g" data-price="32.90">
+        
+      <div class="photo-frame">
+        <div class="photo-frame-inner photo-frame-real">
+          <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=900&q=75" alt="Pote de vidro com mel silvestre e pedaço de favo" loading="lazy">
+        </div>
+        <span class="photo-caption">Mel silvestre</span>
+      </div>
+        <span class="badge" style="margin-top:16px;">NOVIDADE · MEL</span>
+        <h3>Mel silvestre puro</h3>
+        <p class="desc">Das colmeias do próprio sítio, extraído a frio e envasado em pote de vidro. Zero açúcar ou xarope adicionado.</p>
+        <div class="product-foot">
+          <div class="price">R$ 32,90 <span>/ 500 g</span></div>
+          <button class="btn btn-outline js-add-cart" style="padding:10px 18px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 2-1.58l1.65-7.39H5.12"/></svg> Adicionar</button>
+        </div>
+      </article>
     </div>
+  </div>
+</section>
+
+<section class="honey-feature" id="mel">
+  <svg class="honey-drip" viewBox="0 0 1440 110" preserveAspectRatio="none" aria-hidden="true">
+    <defs><linearGradient id="hg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E9DFC7"/><stop offset=".25" stop-color="#F6C453"/><stop offset="1" stop-color="#E0A526"/></linearGradient></defs>
+    <path fill="url(#hg)" d="M0 0h1440v26c-40 0-52 10-60 34s-22 28-30 0-18-30-60-30-80 4-110 10-40 50-54 50-18-40-40-46-90-8-130-6-60 16-72 42-24 30-34 0-30-36-80-36-110 2-150 6-40 24-52 44-22 18-30-4-24-40-70-42-120 4-170 8-50 10-62 30-26 22-34 0-40-34-90-34-60 16-80 20-26 58-40 58-16-30-30-44-40-14-66-14H0Z"/>
+    <circle class="drop" cx="1350" cy="66" r="6" fill="#E0A526"/>
+    <circle class="drop" cx="1030" cy="76" r="5" fill="#E0A526"/>
+    <circle class="drop" cx="590" cy="58" r="5.5" fill="#E0A526"/>
+    <circle class="drop" cx="220" cy="100" r="6" fill="#E0A526"/>
+  </svg>
+  <span class="bee"><svg viewBox="0 0 40 32"><ellipse class="wing" cx="16" cy="8" rx="7" ry="8" fill="#FFF6E3" fill-opacity=".75"/><ellipse class="wing" cx="24" cy="8" rx="6" ry="7" fill="#FFF6E3" fill-opacity=".6"/><ellipse cx="20" cy="20" rx="13" ry="9" fill="#F6C453"/><path d="M15 12v16M21 11.5v17M27 13v14" stroke="#2A1C10" stroke-width="3"/><circle cx="33" cy="18" r="4.5" fill="#2A1C10"/><path d="M7 20l-4 1" stroke="#2A1C10" stroke-width="2" stroke-linecap="round"/></svg></span>
+  <span class="bee b2"><svg viewBox="0 0 40 32"><ellipse class="wing" cx="16" cy="8" rx="7" ry="8" fill="#FFF6E3" fill-opacity=".75"/><ellipse class="wing" cx="24" cy="8" rx="6" ry="7" fill="#FFF6E3" fill-opacity=".6"/><ellipse cx="20" cy="20" rx="13" ry="9" fill="#F6C453"/><path d="M15 12v16M21 11.5v17M27 13v14" stroke="#2A1C10" stroke-width="3"/><circle cx="33" cy="18" r="4.5" fill="#2A1C10"/><path d="M7 20l-4 1" stroke="#2A1C10" stroke-width="2" stroke-linecap="round"/></svg></span>
+  <span class="bee b3"><svg viewBox="0 0 40 32"><ellipse class="wing" cx="16" cy="8" rx="7" ry="8" fill="#FFF6E3" fill-opacity=".75"/><ellipse class="wing" cx="24" cy="8" rx="6" ry="7" fill="#FFF6E3" fill-opacity=".6"/><ellipse cx="20" cy="20" rx="13" ry="9" fill="#F6C453"/><path d="M15 12v16M21 11.5v17M27 13v14" stroke="#2A1C10" stroke-width="3"/><circle cx="33" cy="18" r="4.5" fill="#2A1C10"/><path d="M7 20l-4 1" stroke="#2A1C10" stroke-width="2" stroke-linecap="round"/></svg></span>
+
+  <div class="wrap">
+    <div class="honey-grid">
+      <div class="honey-collage reveal">
+        <figure class="c-main" data-parallax="0.06"><img src="https://images.unsplash.com/photo-1613548058193-1cd24c1bebcf?auto=format&fit=crop&w=1000&q=75" alt="Mel escorrendo da colher para o pote" loading="lazy"><figcaption>EXTRAÍDO A FRIO</figcaption></figure>
+        <figure class="c-side" data-parallax="-0.08"><img src="https://images.unsplash.com/photo-1623018697148-8350cf18e64e?auto=format&fit=crop&w=700&q=75" alt="Favo de mel dourado com os alvéolos cheios" loading="lazy"><figcaption>FAVO OPERCULADO</figcaption></figure>
+        <figure class="c-bee" data-parallax="0.14"><img src="https://images.unsplash.com/photo-1589526261866-ab0d34f8dc19?auto=format&fit=crop&w=500&q=75" alt="Abelha pousada em uma flor amarela" loading="lazy"></figure>
+      </div>
+
+      <div class="reveal" data-id="mel" data-name="Mel silvestre puro 500 g" data-price="32.90">
+        <p class="eyebrow">Novidade · Mel do sítio</p>
+        <h2>Do favo pro seu pote, <em>sem atalho</em></h2>
+        <p class="lead">As mesmas flores que cercam as bananeiras e o pasto alimentam as nossas colmeias. O resultado é um mel silvestre de cor âmbar, aroma floral e sabor que muda levemente a cada florada.</p>
+
+        <div class="honey-points">
+          <div class="honey-point"><span class="hx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6M12 22v-6M4.9 4.9l4.2 4.2M19.1 19.1l-4.2-4.2M2 12h6M22 12h-6"/></svg></span><div><h3>Extraído a frio</h3><p>Centrifugado sem aquecimento, preservando aroma e enzimas naturais.</p></div></div>
+          <div class="honey-point"><span class="hx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg></span><div><h3>Nada adicionado</h3><p>Sem açúcar, xarope ou conservante. Só mel.</p></div></div>
+          <div class="honey-point"><span class="hx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c4-3 7-6.5 7-11a7 7 0 0 0-14 0c0 4.5 3 8 7 11Z"/><path d="M12 8v6M9 11h6"/></svg></span><div><h3>Florada silvestre</h3><p>Matas, pomares e pasto do sítio: sabor com identidade de lugar.</p></div></div>
+          <div class="honey-point"><span class="hx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2h8M9 2v3a4 4 0 0 1-2 3.5V20a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V8.5A4 4 0 0 1 15 5V2"/></svg></span><div><h3>Pote de vidro</h3><p>500 g em vidro reaproveitável, com lote e data de envase no rótulo.</p></div></div>
+        </div>
+
+        <div class="honey-stats">
+          <div><strong data-count="12">12</strong>colmeias no sítio</div>
+          <div><strong data-count="0" data-suffix="%">0%</strong>de aditivos</div>
+          <div><strong data-count="500" data-suffix=" g">500 g</strong>por pote</div>
+        </div>
+
+        <div class="honey-buy">
+          <div class="price">R$ 32,90<span>POTE DE 500 g · AVULSO OU NA CESTA</span></div>
+          <div class="actions">
+            <button class="btn btn-primary btn-shimmer js-add-cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 2-1.58l1.65-7.39H5.12"/></svg> Quero o meu</button>
+            <a href="produtos.html#mel" class="btn btn-ghost-light">Ver detalhes</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="combo-head reveal">
+      <div>
+        <p class="eyebrow">Combina com tudo que a gente produz</p>
+        <h3>Três jeitos de usar o mel com o resto da cesta</h3>
+      </div>
+    </div>
+    <div class="combo-grid">
+      <div class="combo reveal"><span class="emoji">🍌🥛🍯</span><h4>Vitamina da manhã</h4><p>Banana nanica bem madura, leite fresco gelado e uma colher de mel. Bate e pronto.</p></div>
+      <div class="combo reveal"><span class="emoji">🥚🥛🍯</span><h4>Panqueca de domingo</h4><p>Ovos caipiras e leite na massa; mel escorrendo por cima na hora de servir.</p></div>
+      <div class="combo reveal"><span class="emoji">🍌🍯</span><h4>Banana assada com mel</h4><p>Banana cortada ao meio, fio de mel e canela. 15 minutos no forno.</p></div>
+    </div>
+    <p class="honey-note reveal"><span>⚠️</span><span><strong>Importante:</strong> mel não deve ser oferecido a crianças menores de 1 ano. E se o seu mel cristalizar, é bom sinal: é natural do mel puro. Banho-maria morno (até 40 °C) devolve a textura líquida.</span></p>
   </div>
 </section>
 
@@ -609,12 +702,12 @@ footer a:hover{ color:var(--banana); }
           <div class="step">
             <div class="num">01</div>
             <h3>Colheita ao amanhecer</h3>
-            <p>Ovos, banana e leite são colhidos ou ordenhados nas primeiras horas do dia, no ponto certo de frescor.</p>
+            <p>Ovos, banana e leite são colhidos ou ordenhados nas primeiras horas do dia; o mel só sai da colmeia quando o favo está operculado (maduro).</p>
           </div>
           <div class="step">
             <div class="num">02</div>
             <h3>Checagem e preparo</h3>
-            <p>Cada lote passa por conferência visual e de peso antes de seguir para a pasteurização (no caso do leite) ou embalagem.</p>
+            <p>Cada lote passa por conferência visual e de peso antes de seguir para a pasteurização (leite), a extração a frio (mel) ou a embalagem.</p>
           </div>
           <div class="step">
             <div class="num">03</div>
@@ -656,6 +749,12 @@ footer a:hover{ color:var(--banana); }
         </div>
         <span class="photo-caption">Engarrafamento do leite</span>
       </div>
+      <div class="photo-frame">
+        <div class="photo-frame-inner photo-frame-real">
+          <img src="https://images.unsplash.com/photo-1623018697148-8350cf18e64e?auto=format&fit=crop&w=900&q=75" alt="Favo de mel recém-retirado da colmeia" loading="lazy">
+        </div>
+        <span class="photo-caption">Favo direto da colmeia</span>
+      </div>
     </div>
   </div>
 </section>
@@ -668,7 +767,7 @@ footer a:hover{ color:var(--banana); }
     </div>
     <div class="rating-summary reveal">
       <div>
-        <div class="score">4,9</div>
+        <div class="score" data-count="4.9">4,9</div>
         <div class="count">de 5 · 128 avaliações</div>
       </div>
       <div><span class="stars"><span class="star on"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"/></svg></span><span class="star on"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"/></svg></span><span class="star on"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"/></svg></span><span class="star on"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"/></svg></span><span class="star on"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"/></svg></span></span></div>
@@ -753,7 +852,7 @@ footer a:hover{ color:var(--banana); }
     <div class="footer-grid">
       <div>
         <div class="logo">Sítio Três Manhãs</div>
-        <p>Ovos caipiras, banana nanica e leite fresco direto do produtor pra sua casa. Sem atravessador, sem prateleira.</p>
+        <p>Ovos caipiras, banana nanica, leite fresco e mel silvestre direto do produtor pra sua casa. Sem atravessador, sem prateleira.</p>
       </div>
       <div>
         <h4>Navegação</h4>
@@ -942,7 +1041,7 @@ function renderCart(){
     cartItemsEl.innerHTML = ids.map(id => {
       const it = cart[id];
       return '<div class="cart-item">' +
-        '<div class="cart-item-icon">🧺</div>' +
+        '<div class="cart-item-icon">' + (window.productIcon ? productIcon(id) : '🧺') + '</div>' +
         '<div class="cart-item-info"><div class="name">' + it.name + '</div><div class="price">' + fmt(it.price) + ' un.</div></div>' +
         '<div class="cart-qty">' +
           '<button data-act="dec" data-id="' + id + '">−</button>' +
@@ -1030,5 +1129,6 @@ document.getElementById('trackBtn').addEventListener('click', () => {
 });
 
 </script>
+<script src="assets/modern.js"></script>
 </body>
 </html>
